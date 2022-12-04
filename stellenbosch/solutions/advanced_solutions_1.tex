@@ -29,6 +29,13 @@ Problem statement
 \item % Tim, 2022
 There are at least 3 people at a party. All of them have an even number of friends, where friendship is mutual. Show that there are 3 of them who each have the same number of friends.
 
+\textbf{Solution:} \item If there are $2n$ people, then they can have $0,2,...$ or $2n-2$ friends. There are thus $n$ options for how many friends each person can have. If there is someone with 0 friends, there cannot be 2 people with $2n-2$ friends and if there is someone with $2n-2$ friends there cannot be 2 people with 0 friends. We now consider 2 cases:
+\begin{enumerate}
+\item There is a number of friends that no one has (either 0 or $2n-2$). Then there are $n-1$ options for how many friends people have, and $2n$ people. Thus, there must be 3 people that have the same number of friends (by pigeonhole principle).
+\item There is one person who has 0 friends and one person who has $2n-2$. Then there are $2n-2$ other people, and $n-2$ options for how many friends they have. Again, there must now be 3 people that have the same number of friends.
+\end{enumerate}
+If instead there are $2n+1$ people, they can have $0,2,...$ or $2n$ friends. There are thus $n+1$ options for how many friends each person can have. If someone has 0 friends, no one can have $2n$. Then we have $n$ options with $2n+1$ people, so there must be 3 people that have the same number of friends.
+
 
 \item % Malwande, 2022
 Let $ABC$ be an acute-angled triangle. Let $D$, $E$, and $F$ be the feet of the perpendiculars from $A$, $B$, and $C$ onto $BC$, $CA$, and $AB$ respectively. The incircle of triangle $DEF$ touches $EF$, and $DF$ at $X$ and $Y$ respectively. Prove that $XY$ is parallel to $AB$.
