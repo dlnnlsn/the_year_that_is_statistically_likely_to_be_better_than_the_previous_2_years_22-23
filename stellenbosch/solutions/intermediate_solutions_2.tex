@@ -41,7 +41,18 @@ Problem statement
 In $\triangle ABC$ let $\angle C = 90^\circ$, and let $\Gamma$ be the circle with diameter $AC$. Define points $D$ and $E$ on $\Gamma$ such that $D$ is on $BC$ and $DE || AC$. Let $P$ be the intersection of $AE$ and $BC$. Prove
 
 \begin{flalign*}
-  PC \cdot BC = AC^2
+  PC \cdot BC = AC^2.
+\end{flalign*}
+
+\textbf{Solution:} Notice that the statement is true if $\triangle ABC ||| \triangle PAC$, but $\angle PCB = \angle ACB$ so the problem is reduced to showing that $\angle ABC = \angle PAC$. We have that
+\begin{flalign*}
+&& \angle ABC &= 90^\circ - \angle CAB  & (\angle's \text{ in } \triangle)\\
+&& &= 90^\circ - (180^\circ - \angle ADE)  & (\text{co-int } \angle's)\\
+&& &= 90^\circ - \angle ECA  & (\text{opp } \angle's\text{ cyc. quad}).
+\end{flalign*}
+But $AC$ is the diameter of $\Gamma$ so $\angle AEC = 90^\circ$ by Thales' Theorem. Therefore
+\begin{flalign*}
+  \angle ABC = 90^\circ - \angle ECA = \angle CAE = \angle PAC.
 \end{flalign*}
 
 \end{enumerate}
