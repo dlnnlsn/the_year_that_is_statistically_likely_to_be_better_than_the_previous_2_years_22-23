@@ -21,15 +21,22 @@
 \bigskip
 
 \begin{enumerate}[itemsep=\fill]
+\item % Liam, 2022
+Where $p$ is a prime and $n\in\mathbb{N}$, find all solutions to the equation \[p^2 = 2^n + 1.\]
 
-\item % Source of problem
-Problem statement
-
-
+\textbf{Solution:} The only solution is $p = 3$ and $n = 3$.
+\\ Clearly $p>2$. Then 
+\begin{align*}
+	p^2 &= 2^n + 1
+	\\ \iff p^2-1 &= 2^n
+	\\ \iff (p-1)(p+1) &= 2^n
+\end{align*}
+so that both $p-1$ and $p+1$ are powers of two. Since at least one of $p-1$ and $p+1$ is not divisible by $4$, it has to be equal to $2$.
+\\ Now $p+1 = 2$ does not give a prime, and $p-1 = 2$ yields that $p =3$ and $n=3$ as the only solution. 
 \item % Tim, 2022
 There are at least 3 people at a party. All of them have an even number of friends, where friendship is mutual. Show that there are 3 of them who each have the same number of friends.
 
-\textbf{Solution:} \item If there are $2n$ people, then they can have $0,2,...$ or $2n-2$ friends. There are thus $n$ options for how many friends each person can have. If there is someone with 0 friends, there cannot be 2 people with $2n-2$ friends and if there is someone with $2n-2$ friends there cannot be 2 people with 0 friends. We now consider 2 cases:
+\textbf{Solution:} If there are $2n$ people, then they can have $0,2,...$ or $2n-2$ friends. There are thus $n$ options for how many friends each person can have. If there is someone with 0 friends, there cannot be 2 people with $2n-2$ friends and if there is someone with $2n-2$ friends there cannot be 2 people with 0 friends. We now consider 2 cases:
 \begin{enumerate}
 \item There is a number of friends that no one has (either 0 or $2n-2$). Then there are $n-1$ options for how many friends people have, and $2n$ people. Thus, there must be 3 people that have the same number of friends (by pigeonhole principle).
 \item There is one person who has 0 friends and one person who has $2n-2$. Then there are $2n-2$ other people, and $n-2$ options for how many friends they have. Again, there must now be 3 people that have the same number of friends.
@@ -42,10 +49,31 @@ Let $ABC$ be an acute-angled triangle. Let $D$, $E$, and $F$ be the feet of the 
 
 \textbf{Solution:} Notice that the orthocenter, $H$, of $\triangle ABC$ is the in incenter of $\triangle DEF$. Note that $XF=YF$ (common tangents), therefore $FH \perp XY$ (angle bisector of isosceles $\triangle\ \perp base$), but $FH \perp AB$ as $H$ is the orthocenter, therefore, $AB || XY$ (corresponding angles).
 
-\item % 
+\item % % Kgaugelo, 2022
+Given positive real numbers $a$, $b$, and $c$ such that $a+b+c = 3$ and $a^2+b^2+c^2 = 3$. Find the value of \[\frac{a}{b} +\frac{b}{c} +\frac{c}{a}.\]
 
+\textbf{Solution:} We claim that $a=b=c=1$ so that $\frac{a}{b} +\frac{b}{c} +\frac{c}{a} = 3$. 
+\\ Squaring yields 
+\begin{align*}
+	a+b+c &= 9
+	\\ \implies (a+b+c)^2 &= 3
+	\\ \implies a^2+b^2+c^2 + 2ab + 2bc + 2ca &= 9
+	\\ \implies ab + bc + ca &= 3
+\end{align*}
+Now suppose WLOG that $a \geq b \geq c$ so that the rearrangement inequality gives that
+$$a \cdot a + b \cdot b + c \cdot c = a^2+b^2+c^2 \geq ab + bc +ca$$
+with equality holding if and only if $a=b=c$. 
+Thus $a=b=c=1$ as required. 
 
-\item %
+\item % Tim, 2022
+For every positive integer $n$, define \[ r(n) = (n \bmod 1) + (n \bmod 2) + \dotsb + (n \bmod n), \]
+where by $n \bmod m$ we denote the remainder of $n$ on division by $m$.
+Show that there are infinitely many positive integers $k$ such that $r(k) = r(k+1)$.
+
+\textbf{Solution:} We show that $r(4^i-1) = r(4^i)$ for $i\in \mathbb{N}$. Consider $({k\bmod a})$ compared to $({k+1\bmod a})$. Either $({k+1\bmod a}) = ({k\bmod a})+1$, or $({k+1\bmod a}) = 0$. When $k = 4^i-1$, this second case only happens for $a = 2^j$ where $0 \leq j < 2i$, in which case $({k \bmod a}) = 2^j-1$. Using our comparison, and noting that $({n \bmod n})=0$, we come up with the following difference between $r(4^i-1)$ and $r(4^i)$:
+$$ \sum_{\alpha=1}^{4^i-1}1 - \sum_{\alpha=0}^{2i-1}1 - \sum_{\alpha=0}^{2i-1} (2^{\alpha}-1) = \sum_{\alpha=1}^{4^i-1}1 - \sum_{\alpha=0}^{2i-1} 2^{\alpha} = 4^i-1 - [2^{2i}-1] = 0. $$
+(All of the numbers you can have as a modulus, minus the ones where you won't increase by 1, minus how much you would decrease by for each of these).
+Hence, $r(4^i-1) = r(4^i)$ for $i\in \mathbb{N}$.
 
 
 \end{enumerate}

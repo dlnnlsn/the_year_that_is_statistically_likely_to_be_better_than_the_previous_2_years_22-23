@@ -1,0 +1,75 @@
+\documentclass{article}
+
+\usepackage{mathtools,amsfonts}
+\usepackage{enumitem}
+\usepackage{fullpage}
+\usepackage{fancyvrb}
+\usepackage{hyperref}
+
+
+\begin{document}
+\thispagestyle{empty}
+
+\begin{center}
+  \textbf{\Large Intermediate Test 1}
+  \\ \vspace{1em}
+  \textbf{\large Stellenbosch Camp 2022}
+  \\ \vspace{1em}
+  \textbf{\large Time: $2\frac{1}{2}$ hours}
+\end{center}
+
+\bigskip
+
+\begin{enumerate}[itemsep=\fill]
+	
+
+
+\item % Tim, 2022
+\textbf{Solution:} Note that the $1\times1$ square will have to be 'next' to an $\mathbf{L}$-shaped tile to form a $2\times2$ square. We can then consider the amount of ways to tile the $2\times5$ board with a $2\times2$ square and two $\mathbf{L}$-shaped tiles. Note that the square will have to be placed on the board such that the amount of tiles to the left and right of it are multiples of $3$, leaving two possible locations for the square on the edges of the board. The resulting $2\times3$ rectangle can be tiled in two ways with the remaining $\mathbf{L}$-shaped tiles. Considering the $4$ rotations of the $2\times2$ square as unique tilings, the $2$ locations the square can be, as well as the $2$ ways the resulting rectangle can be tiled, there are $16$ possible tilings. 
+
+
+\item % Tim, 2022
+Let the altitude from point $A$ meet $BC$ at $D$, and let this length be $h$. Note that in $\triangle ADB$, $AB$ is the hypotenuse of a right angled triangle, meaning that $h = AD \leq AB = 1$. The area of $\triangle ABC$ is $\frac{1}{2}AD.BC = \frac{1}{2}h \leq \frac{1}{2}.1$. This is achieved in the degenerate case where $D = B$ and $\angle ABC = 90^{\circ}$
+
+\item % 
+Given an acute angled triangle with sides of lengths $a,b$ and $c$. Prove that: \[a^2 + b^2 > c^2\]
+
+\textbf{Solution:} Consider an acute-angled triangle $ABC$ such that the perpendicular from $A$ intersects $BC$ at $D$. Let $AB=a$, $BC=b$ and $CA=c$. Notice that $AB^{2}$ = $BD^{2} + DA^{2}$ by Pythagoras' Theorem.  and $BC^{2}$ = $(BD + DC)^{2}$ = $BD^{2} + 2BD\times DC + DC^{2}$. Thus,
+\begin{align*}
+    AB^{2} + BC^{2} = DA^{2} + DC^{2} + 2BD \times DC + 2BD^{2}
+\end{align*}
+Moreover, since $CA^{2} = DA^{2} + DC^{2}$ by Pythagoras' Theorem. We have,
+\begin{align*}
+    AB^{2} + BC^{2} = CA^{2} + 2BD \times DC + 2BD^{2} > CA^{2}  
+\end{align*}
+Therefore $a^{2} + b^{2} = AB^{2} + BC^{2} > CA^{2} = c^{2}$
+
+
+\item % 
+
+
+\item % Liam, 2022
+Where $p$ is a prime and $n\in\mathbb{N}$, find all solutions to the equation \[p^2 = 2^n + 1.\]
+
+\textbf{Solution:} The only solution is $p = 3$ and $n = 3$.
+\\ Clearly $p>2$. Then 
+\begin{align*}
+	p^2 &= 2^n + 1
+	\\ \iff p^2-1 &= 2^n
+	\\ \iff (p-1)(p+1) &= 2^n
+\end{align*}
+so that both $p-1$ and $p+1$ are powers of two. Since at least one of $p-1$ and $p+1$ is not divisible by $4$, it has to be equal to $2$.
+\\ Now $p+1 = 2$ does not give a prime, and $p-1 = 2$ yields that $p =3$ and $n=3$ as the only solution. 
+
+
+\end{enumerate}
+
+
+% ASCII art
+\centering
+\small
+\begin{BVerbatim}
+% Insert art here
+\end{BVerbatim}
+
+\end{document}
