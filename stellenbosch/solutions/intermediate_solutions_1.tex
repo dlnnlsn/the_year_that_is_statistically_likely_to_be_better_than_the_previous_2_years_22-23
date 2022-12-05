@@ -45,9 +45,6 @@ Moreover, since $CA^{2} = DA^{2} + DC^{2}$ by Pythagoras' Theorem. We have,
 Therefore $a^{2} + b^{2} = AB^{2} + BC^{2} > CA^{2} = c^{2}$
 
 
-\item % 
-
-
 \item % Liam, 2022
 Where $p$ is a prime and $n\in\mathbb{N}$, find all solutions to the equation \[p^2 = 2^n + 1.\]
 
@@ -60,6 +57,18 @@ Where $p$ is a prime and $n\in\mathbb{N}$, find all solutions to the equation \[
 \end{align*}
 so that both $p-1$ and $p+1$ are powers of two. Since at least one of $p-1$ and $p+1$ is not divisible by $4$, it has to be equal to $2$.
 \\ Now $p+1 = 2$ does not give a prime, and $p-1 = 2$ yields that $p =3$ and $n=3$ as the only solution. 
+
+\item
+There are at least 3 people at a party. All of them have an even number of friends, where friendship is mutual. Show that there are 3 of them who each have the same number of friends.
+
+\textbf{Solution:} If there are $2n$ people, then they can have $0,2,...$ or $2n-2$ friends. There are thus $n$ options for how many friends each person can have. If there is someone with 0 friends, there cannot be 2 people with $2n-2$ friends and if there is someone with $2n-2$ friends there cannot be 2 people with 0 friends. We now consider 2 cases:
+\begin{enumerate}
+\item There is a number of friends that no one has (either 0 or $2n-2$). Then there are $n-1$ options for how many friends people have, and $2n$ people. Thus, there must be 3 people that have the same number of friends (by pigeonhole principle).
+\item There is one person who has 0 friends and one person who has $2n-2$. Then there are $2n-2$ other people, and $n-2$ options for how many friends they have. Again, there must now be 3 people that have the same number of friends.
+\end{enumerate}
+If instead there are $2n+1$ people, they can have $0,2,...$ or $2n$ friends. There are thus $n+1$ options for how many friends each person can have. If someone has 0 friends, no one can have $2n$. Then we have $n$ options with $2n+1$ people, so there must be 3 people that have the same number of friends.
+
+
 
 
 \end{enumerate}
