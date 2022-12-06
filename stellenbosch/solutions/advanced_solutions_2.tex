@@ -2,40 +2,39 @@
 
 \usepackage{mathtools,amsfonts}
 \usepackage{enumitem}
-\usepackage{fullpage}
+\usepackage[cm]{fullpage}
 \usepackage{fancyvrb}
 \usepackage{hyperref}
+\usepackage{parskip}
 
 
 \begin{document}
 \thispagestyle{empty}
 
 \begin{center}
-  \textbf{\Large <LEVEL> Test <NUMBER>}
-  % LEVEL is Senior, Intermediate or Beginner
-  % NUMBER is the test number: 1, 2, etc.
+  \textbf{\Large Advanced Test 2 Solutions}
   \\ \vspace{1em}
   \textbf{\large Stellenbosch Camp 2022}
-  \\ \vspace{1em}
-  \textbf{\large Time: $2\frac{1}{2}$ hours}
 \end{center}
 
 \bigskip
 
-\begin{enumerate}[itemsep=\fill]
+\begin{enumerate}[itemsep=24pt]
 
 \item % 2022, Emile
+William and Beatrice take turns placing Kings on a $n \times m$ chessboard.
+Kings cannot be placed on any of the 8 adjacent squares of Kings of \emph{differing} colour.
+With William playing first as white, and Beatrice playing second as black, who has the winning strategy?
+
+\textbf{Solution:}
 William will always have a winning strategy. William's first move is to place his initial king on a square that either contains the center-point or has the center-point of the board on its border. William can then rotate Beatrice's moves $180^{\circ}$ through the center-point of the board. Note that Beatrice cannot place a king in such a way that the reflection of her move is within the $8$ adjacent squares of the placed king. Therefor William will always be able to make a move as any legal move Beatrice plays will also have to be legal for William to play on the reflection. As the game is forced to end in less than $nm$ moves, William will place the last piece and have the winning strategy.
 
 
 \item % Baltic Way 1994
-In $\triangle ABC$ let $\angle C = 90^\circ$, and let $\Gamma$ be the circle with diameter $AC$. Define points $D$ and $E$ on $\Gamma$ such that $D$ is on $AB$ and $DE || AC$. Let $P$ be the intersection of $AE$ and $BC$. Prove
+In $\triangle ABC$ let $\angle C = 90^\circ$, and let $\Gamma$ be the circle with diameter $AC$. Define points $D$ and $E$ on $\Gamma$ such that $D$ is on $AB$ and $DE \parallel AC$. Let $P$ be the intersection of $AE$ and $BC$. Prove that
+\[ PC \cdot BC = AC^2. \]
 
-\begin{flalign*}
-  PC \cdot BC = AC^2.
-\end{flalign*}
-
-\textbf{Solution:} Notice that the statement is true if $\triangle ABC ||| \triangle PAC$, but $\angle PCB = \angle ACB$ so the problem is reduced to showing that $\angle ABC = \angle PAC$. We have that
+\textbf{Solution:} Notice that the statement is true if $\triangle ABC \operatorname{|||} \triangle PAC$, but $\angle PCB = \angle ACB$ so the problem is reduced to showing that $\angle ABC = \angle PAC$. We have that
 \begin{flalign*}
 && \angle ABC &= 90^\circ - \angle CAB  & (\angle's \text{ in } \triangle)\\
 && &= 90^\circ - (180^\circ - \angle ADE)  & (\text{co-int } \angle's)\\
@@ -45,7 +44,6 @@ But $AC$ is the diameter of $\Gamma$ so $\angle AEC = 90^\circ$ by Thales' Theor
 \begin{flalign*}
   \angle ABC = 90^\circ - \angle ECA = \angle CAE = \angle PAC.
 \end{flalign*}
-
 
 
 \item %
@@ -78,40 +76,44 @@ Evaluate the following expression for all positive integers $n$:
 \[ {2n \choose 0} -{2n-1 \choose 1}+{2n-2 \choose 2}-...+(-1)^n{n \choose n} \]
 
 \textbf{Solution:} Define:
-$$E_n = {2n \choose 0} -{2n-1 \choose 1}+{2n-2 \choose 2}-...+(-1)^n{n \choose n} , \;\;\;\; O_n = {2n+1 \choose 0} -{2n \choose 1}+{2n-1 \choose 2}-...+(-1)^n{n+1 \choose n}.$$
+\[ E_n = {2n \choose 0} -{2n-1 \choose 1}+{2n-2 \choose 2}-...+(-1)^n{n \choose n} \ \text{and} \ O_n = {2n+1 \choose 0} -{2n \choose 1}+{2n-1 \choose 2}-...+(-1)^n{n+1 \choose n}. \]
 Then, using the fact that ${m\choose k} = {m-1 \choose k} + {m-1 \choose k-1}$:
 \begin{align*}
-E_n &= {2n-1 \choose 0} - \left({2n-2 \choose 1} + {2n-2 \choose 0}\right) + \left({2n-3 \choose 2} + {2n-3 \choose 1}\right) - ...\\ &+ (-1)^{n-1}\left({n \choose n-1} + {n \choose n-2}\right)+(-1)^n {n-1 \choose n-1}\\
-&= \left({2n-1 \choose 0}-{2n-2 \choose 1}+{2n-3\choose 2}-...+(-1)^{n-1}{n\choose n-1}\right)\\ &- \left({2n-2\choose 0} - {2n-3\choose 1}+...+(-1)^{n-1}{n\choose n-2} + (-1)^n{n-1 \choose n-1}\right)\\
+E_n &= \begin{multlined}[t] {2n-1 \choose 0} - \left({2n-2 \choose 1} + {2n-2 \choose 0}\right) + \left({2n-3 \choose 2} + {2n-3 \choose 1}\right) - ...\\ + (-1)^{n-1}\left({n \choose n-1} + {n \choose n-2}\right)+(-1)^n {n-1 \choose n-1} \end{multlined} \\
+&= \begin{multlined}[t] \left({2n-1 \choose 0}-{2n-2 \choose 1}+{2n-3\choose 2}-...+(-1)^{n-1}{n\choose n-1}\right) \\ - \left({2n-2\choose 0} - {2n-3\choose 1}+...+(-1)^{n-1}{n\choose n-2} + (-1)^n{n-1 \choose n-1}\right) \end{multlined} \\
 &= O_{n-1}-E_{n-1}
 \end{align*}
 A similar argument shows that $O_n = E_n - O_{n-1}$. Then:
-\begin{align*}
-E_n &= O_{n-1}-E_{n-1}\\
-&= E_{n-1}-O_{n-2}-E_{n-1}\\
-&= -O_{n-2}\\
-&= -(E_{n-2}-O_{n-3})\\
-&= -(O_{n-3}-E_{n-3}-O_{n-3})\\
-&= E_{n-3}
-\end{align*}
+\[ E_n = O_{n-1}-E_{n-1} = E_{n-1}-O_{n-2}-E_{n-1} = -O_{n-2} = -(E_{n-2}-O_{n-3}) = -(O_{n-3}-E_{n-3}-O_{n-3}) = E_{n-3}. \]
 Now, since $E_0 = 1, E_1 = 0, E_2 = -1$, we have:
 $$E_i = \begin{cases}
 1 &\quad\text{if } i \bmod 3 = 0 \\
 0 &\quad\text{if } i \bmod 3 = 1 \\
 -1 &\quad\text{if } i \bmod 3 = 2 \\
-\end{cases}$$
+\end{cases}.$$
 
 
-\item % 
+\item % PAMO 2016 P4
+Let $x$, $y$, and $z$ be positive real numbers such that $xyz = 1$.
+Prove that
+\[ \frac{x^2y^2}{y^2(x+1)^2+x^2+x^2y^2} +\frac{y^2z^2}{z^2(y+1)^2+y^2+y^2z^2} +\frac{z^2x^2}{x^2(z+1)^2+z^2+z^2x^2} \leq \frac{1}{2}. \]
+
+\textbf{Solution:}
+Since $xyz = 1$, we can let $x = a/b$, $y = b/c$, and $z = c/a$ where $a,b,c > 0$.
+Then
+\begin{align*}
+  \frac{x^2y^2}{y^2(x+1)^2+x^2+x^2y^2} &= \frac{a^2/c^2}{(a+b)^2/c^2+a^2/b^2+a^2/c^2} = \frac{a^2b^2}{(a+b)^2b^2+a^2c^2+a^2b^2} = \frac{a^2b^2}{2a^2b^2+2ab^3+b^4+a^2c^2} \\
+  &\leq \frac{a^2b^2}{2a^2b^2+2ab^3+2ab^2c} = \frac{a}{2a+2b+2c} \quad\text{since}\ b^4+a^2c^2 \geq 2ab^2c \ \text{by AM-GM.}
+\end{align*}
+Similarly, for the other two terms we get
+\[ \frac{y^2z^2}{z^2(y+1)^2+y^2+y^2z^2} \leq \frac{b}{2a+2b+2c} \quad\text{and}\quad \frac{z^2x^2}{x^2(z+1)^2+z^2+z^2x^2} \leq \frac{c}{2a+2b+2c}, \]
+and so adding these together we get
+\begin{align*}
+  &\mspace{24mu} \frac{x^2y^2}{y^2(x+1)^2+x^2+x^2y^2} +\frac{y^2z^2}{z^2(y+1)^2+y^2+y^2z^2} +\frac{z^2x^2}{x^2(z+1)^2+z^2+z^2x^2} \\
+  &\leq \frac{a}{2a+2b+2c} +\frac{b}{2a+2b+2c} +\frac{c}{2a+2b+2c} = \frac{1}{2}
+\end{align*}
+as desired.
 
 \end{enumerate}
-
-
-% ASCII art
-\centering
-\small
-\begin{BVerbatim}
-% Insert art here
-\end{BVerbatim}
 
 \end{document}
