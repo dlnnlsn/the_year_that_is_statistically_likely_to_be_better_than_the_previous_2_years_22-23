@@ -2,56 +2,35 @@
 
 \usepackage{mathtools,amsfonts}
 \usepackage{enumitem}
-\usepackage[cm]{fullpage}
+\usepackage{fullpage}
 \usepackage{fancyvrb}
 \usepackage{hyperref}
-\usepackage{parskip}
+%\usepackage{parskip}
 
 
 \begin{document}
 \thispagestyle{empty}
 
 \begin{center}
-  \textbf{\Large Intermediate Test 2 Solutions}
+  \textbf{Intermediate Test 2 Solutions}
   \\ \vspace{1em}
   \textbf{\large Stellenbosch Camp 2022}
 \end{center}
 
 
-\bigskip
-
-\begin{enumerate}[itemsep=12pt plus 6pt minus 6pt]
+\begin{enumerate}[itemsep=24pt]
 
 \item % Source of problem
-Let $D$ be a point in the interior of $\triangle ABC$. Let $M,N,P,Q$ be the midpoints of $AC, AB, DC, DB$ respectively. Prove that the area of $ABDC$ is twice the area of $NMPQ$.
-
-\begin{center}
-  \includegraphics[scale=0.6]{IntermediateQ1_Day2Graphic.png}
-\end{center}
-Let $E$ and $G$ be the intersection of the lines $NQ$ and $AD$ with the perpendicular line from $B$ and $F$ and $H$ be the intersection of the lines $MP$ and $AD$.
-
-By the midpoint theorem in $\triangle ABC$ and $\triangle BDC$ we have that $NM \parallel BC \parallel QP$, as well as midpoint theorem in $\triangle ABD$ and $\triangle ACD$, we find that $ON \parallel AD \parallel PM$ and $ON = \frac{AD}{2} =MP$. Thus, $NMPQ$ is a parallelogram. 
-
-From $N$ being the midpoint of $AB$ and $ON||AD$, we have $BE = EG$ (midpoint theorem).
-$M$ is the midpoint of $AC$ and $MP \parallel AD$ gives $HF = FC$.
-
-Notice that since $AH \parallel MP$ and $BI \parallel CH$, we have $GI \parallel HF$ and $GH \parallel IF$ and thus, $GIFH$ is a parallelogram. Meaning that $GI = HF$.
-From the above, we have:
-\begin{align*}
-Area(ABDC)
-  & = Area(ABD) + Area(ACD) = \frac{BG \times AD}{2} + \frac{CH \times AD}{2} \\
-  & = \frac{2EG \times AD + 2HF \times AD}{2}\\
-  & = (EG + HF) \times AD = (EG + GI) \times AD\\
-  & = EI \times AD = EI \times (2ON) = 2(EI \times ON) = 2 \times Area(NMPQ).
-\end{align*}
+Problem statement
 
 
 \item % 2022, Andrew
 Find all functions $f:\mathbb{R}\to\mathbb{R}$ such that:
 \[f(x) + f(y) = f(2x+y) - x\] for all $x,y\in\mathbb{R}$.
 
-\textbf{Solution:}
-$y = -x$ gives us $f(x) + f(-x) = f(2x-x) - x \implies f(-x) = -x \implies f(x) = x$.
+\textbf{Solution:} Let $y = -x$:
+\[f(x) + f(-x) = f(2x-x) - x\]
+\[f(-x) = -x\implies f(x) = x\]
 The check is trivial.
 
 \item 
