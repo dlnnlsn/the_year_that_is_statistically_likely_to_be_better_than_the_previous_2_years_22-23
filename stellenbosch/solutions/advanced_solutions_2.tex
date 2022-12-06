@@ -48,7 +48,29 @@ But $AC$ is the diameter of $\Gamma$ so $\angle AEC = 90^\circ$ by Thales' Theor
 
 
 
-\item % 
+\item %
+The given recurrence relation is equivalent to
+\[
+    \frac{1}{a_{n}} = \frac{1}{a_{n - 1}} + \frac{1}{a_{n - 2}}.
+\]
+It follows that (e.g. using induction)
+\[
+    \frac{1}{a_{n}} = \frac{F_{n - 2}}{\ell} + \frac{F_{n - 1}}{m},
+\]
+where $F_k$ is the $k^\text{th}$ Fibonacci number.
+
+We thus have that
+\[
+    a_{2022} = \frac{\ell m}{m F_{2020} + \ell F_{2021}}.
+\]
+
+We note that for any natural number $k$, we have that $\gcd(F_k, F_{k + 1}) = 1$. (This can also be proven using induction.) By B\'ezout's Lemma, we know that there are infinitely many integers $\ell$ and $m$ such that $\ell F_{2020} + m F_{2021} = \gcd(F_{2020}, F_{2021}) = 1.$
+
+It is clear that one of $\ell$ and $m$ is positive, and the other is negative. For these values of $\ell$ and $m$ we have that
+\[
+    \frac{(-\ell) (-m)}{(-m) F_{2020} + (-\ell) F_{2021}} = \frac{\ell m}{-1}
+\]
+which is a positive integer. (Here we take $a_1 = -\ell$ and $a_2 = -m$.)
 
 
 \item % M Ahsan Al Mahir, 2020
