@@ -35,7 +35,40 @@ Let $y = -x$:
 The check is trivial.
 
 \item % 
+Find all $m,n\in \mathbb{Z}$ satisfying the following equation:
+\begin{align}
+m^3 + n^3 = (m+n)^2 
+\end{align}
 
+\textbf{Solution:} Notice that $m^3 + n^3$ can be factorised as $m^3 + n^3=(m+n)(m^{2} -mn + n^{2})$, thus equation (1) becomes:
+\begin{align*}
+    (m+n)(m^{2} -mn + n^{2}) & = (m+n)^2\\
+    (m+n)(m^{2} -mn + n^{2} -m -n) & = 0 \\
+\end{align*}
+Thus, either $m = -n$ or $m^{2} -mn + n^{2} -m -n = 0$. The former is clearly a solution, so we consider the latter case henceforth. Observe that one can make the following factorisation:
+\begin{align}
+    m^{2} -mn + n^{2} -m -n & = 0 \nonumber\\ 
+    m^{2} - mn + \frac{n^{2}}{4} + \frac{3n^{2}}{4} - m -n & = 0 \nonumber\\
+    \left(m - \frac{n}{2}\right)^{2} - \left(m - \frac{n}{2}\right) + \frac{3n^{2}}{4} - \frac{3n}{2} & = 0 \nonumber\\
+    \left(m - \frac{n}{2}\right)^{2} - \left(m - \frac{n}{2}\right) + \frac{1}{4} + \frac{3n^{2}}{4} - \frac{3n}{2} + \frac{3}{4} & = \frac{1}{4} +\frac{3}{4} \nonumber\\
+    \left(m - \frac{n}{2} - \frac{1}{2}\right)^{2} +3\left(\frac{n}{2} - \frac{1}{2}\right)^{2} & = 1 \nonumber\\
+    (2m - n - 1)^{2} + 3(n-1)^{2} & = 4 
+\end{align}
+
+If $(n-1)^{2} \geq 2$, we have
+\begin{align*}
+    3(n-1)^{2} & \geq 6 \\
+    (2m - n - 1)^{2} & \geq 0 \\
+    \Rightarrow 4 = (2m - n - 1)^{2} + 3(n-1)^{2} & \geq 6
+\end{align*}
+Which is not possible, thus $(n-1)^{2} \leq 1$. So we have either $(n-1)^{2} = 1$ or $(n-1)^{2} = 0$
+\begin{enumerate}
+\item If $(n-1)^{2} = 1$: $n = 2$ or $n=0$.
+\begin{enumerate}
+    \item If $n=2$, then $(2)$ becomes $(2m -3)^{2} + 3 = 4$ $\Rightarrow$ $2m - 3 = 1$ or $2m - 3 = -1$. Thus $(m, n) = (2, 2), (1, 2)$. \newline
+    \item If $n = 0$, $(2)$ becomes $(2m -1)^{2} + 3 = 4$. Thus $\Rightarrow$ $2m- 1 = 1$ or $2m - 1 = -1$. Yielding $(m, n) = (1, 0), (0, 0)$
+\end{enumerate}
+\item If $(n-1)^{2} = 0$: $n = 1$, then (2) becomes $(2m - 2)^{2} = 4$. Thus $(m, n) = (2, 1), (0, 1)$
 
 \item % 2022, Emile
 William will always have a winning strategy. William's first move is to place his initial king on a square that either contains the center-point or has the center-point of the board on its border. William can then rotate Beatrice's moves $180^{\circ}$ through the center-point of the board. Note that Beatrice cannot place a king in such a way that the reflection of her move is within the $8$ adjacent squares of the placed king. Therefor William will always be able to make a move as any legal move Beatrice plays will also have to be legal for William to play on the reflection. As the game is forced to end in less than $nm$ moves, William will place the last piece and have the winning strategy.
