@@ -51,7 +51,33 @@ But $AC$ is the diameter of $\Gamma$ so $\angle AEC = 90^\circ$ by Thales' Theor
 \item % 
 
 
-\item % 
+\item % M Ahsan Al Mahir, 2020
+Evaluate the following expression for all positive integers $n$:
+\[ {2n \choose 0} -{2n-1 \choose 1}+{2n-2 \choose 2}-...+(-1)^n{n \choose n} \]
+
+\textbf{Solution:} Define:
+$$E_n = {2n \choose 0} -{2n-1 \choose 1}+{2n-2 \choose 2}-...+(-1)^n{n \choose n} , \;\;\;\; O_n = {2n+1 \choose 0} -{2n \choose 1}+{2n-1 \choose 2}-...+(-1)^n{n+1 \choose n}.$$
+Then, using the fact that ${m\choose k} = {m-1 \choose k} + {m-1 \choose k-1}$:
+\begin{align*}
+E_n &= {2n-1 \choose 0} - \left({2n-2 \choose 1} + {2n-2 \choose 0}\right) + \left({2n-3 \choose 2} + {2n-3 \choose 1}\right) - ...\\ &+ (-1)^{n-1}\left({n \choose n-1} + {n \choose n-2}\right)+(-1)^n {n-1 \choose n-1}\\
+&= \left({2n-1 \choose 0}-{2n-2 \choose 1}+{2n-3\choose 2}-...+(-1)^{n-1}{n\choose n-1}\right)\\ &- \left({2n-2\choose 0} - {2n-3\choose 1}+...+(-1)^{n-1}{n\choose n-2} + (-1)^n{n-1 \choose n-1}\right)\\
+&= O_{n-1}-E_{n-1}
+\end{align*}
+A similar argument shows that $O_n = E_n - O_{n-1}$. Then:
+\begin{align*}
+E_n &= O_{n-1}-E_{n-1}\\
+&= E_{n-1}-O_{n-2}-E_{n-1}\\
+&= -O_{n-2}\\
+&= -(E_{n-2}-O_{n-3})\\
+&= -(O_{n-3}-E_{n-3}-O_{n-3})\\
+&= E_{n-3}
+\end{align*}
+Now, since $E_0 = 1, E_1 = 0, E_2 = -1$, we have:
+$$E_i = \begin{cases}
+1 &\quad\text{if } i \bmod 3 = 0 \\
+0 &\quad\text{if } i \bmod 3 = 1 \\
+-1 &\quad\text{if } i \bmod 3 = 2 \\
+\end{cases}$$
 
 
 \item % 
