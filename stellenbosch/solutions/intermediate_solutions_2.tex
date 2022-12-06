@@ -21,7 +21,25 @@
 \begin{enumerate}[itemsep=24pt]
 
 \item % Source of problem
-Problem statement
+Let $D$ be a point in the interior of $\triangle ABC$. Let $M,N,P,Q$ be the midpoints of $AC, AB, DC, DB$ respectively. Prove that the area of $ABDC$ is twice the area of $NMPQ$. 
+
+\begin{center}
+    \includegraphics[scale=0.6]{IntermediateQ1_Day2Graphic.png}
+\end{center}
+Let $E$ and $G$ be the intersection of the lines $NQ$ and $AD$ with the perpendicular line from $B$ and $F$ and $H$ be the intersection of the lines $MP$ and $AD$.
+\\ By the midpoint theorem in $\triangle ABC$ and $\triangle BDC$ we have that $NM || BC || QP$, as well as midpoint theorem in $\triangle ABD$ and $\triangle ACD$, we find that $ON || AD || PM$ and $ON = \frac{AD}{2} =MP$. Thus, $NMPQ$ is a parallelogram. 
+\\From $N$ is the midpoint of $AB$ and $ON||AD$, we have $BE = EG$ (midpoint theorem). $M$ is the midpoint of $AC$ and $MP || AD$ gives $HF = FC$ 
+\\Notice that since $AH || MP$ and $BI || CH$, we have $GI || HF$ and $GH || IF$ and thus, $GIFH$ is parallelogram. Meaning that $GI = HF$.
+From the above, we have:
+\begin{align*}
+Area(ABDC) & = Area(ABD) + Area(ACD) \\
+           & = \frac{BG \times AD}{2} + \frac{CH \times AD}{2} \\
+           & = \frac{2EG \times AD + 2HF \times AD}{2}\\
+           & = (EG + HF) \times AD\\
+           & = (EG + GI) \times AD\\
+           & = EI \times AD = EI \times (2ON) \\
+           & = 2(EI \times ON) = 2 \times Area(NMPQ)
+\end{align*}
 
 
 \item % 2022, Andrew
