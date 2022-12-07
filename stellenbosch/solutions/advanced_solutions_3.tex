@@ -5,10 +5,14 @@
 \usepackage{fullpage}
 \usepackage{fancyvrb}
 \usepackage{hyperref}
-
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
 
 \begin{document}
 \thispagestyle{empty}
+\definecolor{wrwrwr}{rgb}{0.3803921568627451,0.3803921568627451,0.3803921568627451}
 
 \begin{center}
   \textbf{\Large <LEVEL> Test <NUMBER>}
@@ -37,7 +41,84 @@ Problem statement
 \item % 
 
 
-\item % 
+\item %  IMO Shortlist 1998 G3
+Let $I$ be the incenter of triangle $\triangle ABC$.
+Let $D$, $E$ and $F$ be the points of tangency of the incircle of $\triangle ABC$ with $BC$, $CA$ and $AB$, respectively.
+The line $\ell$ passes through $B$ and is parallel to $DF$.
+The lines $ED$ and $EF$ intersect $\ell$ at the points $X$ and $Y$.
+Prove that $\angle XIY$ is acute.
+
+\textbf{Solution:} 
+
+
+
+\begin{center}
+
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.3cm,y=0.3cm]
+\clip(-14,-18) rectangle (18,14);
+\draw [line width=1pt,color=wrwrwr] (-7.48418072213211,11.943124790001734)-- (9.851072169964434,-4.109768681891099);
+\draw [line width=1pt,color=wrwrwr] (9.851072169964434,-4.109768681891099)-- (-10.910046034501077,-4.1752906960620875);
+\draw [line width=1pt,color=wrwrwr] (-10.910046034501077,-4.1752906960620875)-- (-7.48418072213211,11.943124790001734);
+\draw [line width=1pt,color=wrwrwr] (-4.120771171316693,1.3403872874828022) circle (5.494223694538245);
+\draw [line width=1pt,color=wrwrwr] (-0.3877344450702902,5.371631612269011)-- (-4.103431507507615,-4.153809045165356);
+\draw [line width=1pt,color=wrwrwr,domain=-23.37794930246684:24.80881197642785] plot(\x,{(--109.10645878569908-9.525440657434366*\x)/-3.715697062437325});
+\draw [line width=1pt,color=wrwrwr,domain=-23.37794930246684:24.80881197642785] plot(\x,{(--50.04075544833976--2.8889978704593577*\x)/9.107212667095684});
+\draw [line width=1pt,color=wrwrwr,domain=-23.37794930246684:24.80881197642785] plot(\x,{(-49.627514715624955-6.636442786975009*\x)/5.391515604658359});
+\draw [line width=1pt,color=wrwrwr] (-4.120771171316693,1.3403872874828022)-- (15.51776782456035,10.417188783846877);
+\draw [line width=1pt,color=wrwrwr] (-4.120771171316693,1.3403872874828022)-- (5.312705659956814,-15.744178093192318);
+\draw [line width=1pt,color=wrwrwr] (-4.120771171316693,1.3403872874828022)-- (9.851072169964434,-4.109768681891099);
+\draw [line width=1pt,color=wrwrwr] (-4.120771171316693,1.3403872874828022)-- (-0.3877344450702902,5.371631612269011);
+\draw [line width=1pt,color=wrwrwr] (-4.120771171316693,1.3403872874828022)-- (-4.103431507507615,-4.153809045165356);
+
+
+\draw [fill=black] (-7.48418072213211,11.943124790001734) circle (1pt);
+\draw[color=black, left] (-7.48418072213211,11.943124790001734) node {$A$};
+\draw [fill=black] (9.851072169964434,-4.109768681891099) circle (1pt);
+\draw[color=black,right] (9.851072169964434,-4.109768681891099) node {$B$};
+\draw [fill=black] (-10.910046034501077,-4.1752906960620875) circle (1pt);
+\draw[color=black,left] (-10.910046034501077,-4.1752906960620875) node {$C$};
+\draw [fill=black] (-4.120771171316693,1.3403872874828022) circle (1pt);
+\draw[color=black,left] (-4.120771171316693,1.3403872874828022) node {$I$};
+\draw [fill=black] (-0.3877344450702902,5.371631612269011) circle (1pt);
+\draw[color=black,above] (-0.3877344450702902,5.371631612269011) node {$F$};
+\draw [fill=black] (-4.103431507507615,-4.153809045165356) circle (1pt);
+\draw[color=black,below left] (-4.103431507507615,-4.153809045165356) node {$D$};
+\draw [fill=black] (-9.494947112165974,2.4826337418096536) circle (1pt);
+\draw[color=black,below left] (-9.494947112165974,2.4826337418096536) node {$E$};
+\draw[color=black] (2.0,-20.0) node {$\ell$};
+\draw [fill=black] (15.51776782456035,10.417188783846877) circle (1pt);
+\draw[color=black,above left] (15.51776782456035,10.417188783846877) node {$Y$};
+\draw [fill=black] (5.312705659956814,-15.744178093192318) circle (1pt);
+\draw[color=black,right] (5.312705659956814,-15.744178093192318) node {$X$};
+\end{tikzpicture}
+\end{center}
+Note that if  $\triangle XIY$ is acute then $\angle XIY$ is acute. So the problem can be reduced to proving the inequality
+\begin{flalign} %Keep this environment I need the equation annotation
+  XI^2 +IY^2 > XY^2 \label{eqn:e1}.
+\end{flalign}
+We notice that $IF=ID$ (radii) and $BF=BD$ (tangents), therefore $DIFB$ is a kite, therefore $IB\perp FD$, therefore $IB\perp XY$ (corresponding angles, $DF||XY$). We can now reduce our proof requirement (\ref{eqn:e1})
+
+\begin{flalign}
+  && XI^2 +IY^2 &> XY^2 &\nonumber\\
+  &\Leftrightarrow& XB^2+BI^2+BI^2+BY^2 &> (XB+BY)^2 & (\text{Pythagoras})\nonumber\\
+  &\Leftrightarrow& XB^2+BY^2+2BI^2 &> XB^2+2XB \cdot BY+ BY^2 &\nonumber\\
+  &\Leftrightarrow& BI^2 &> XB \cdot BY. &\label{eqn:e2}
+\end{flalign}
+
+Notice that $\angle BXD = \angle FDE = \angle AFE = \angle BFY$ (corr. $\angle$s, tan-chord, vert-op respectively). Similarly we see $\angle BDX = \angle EDC = \angle EFD = \angle BYF$. Therefore $\triangle BDX ||| \triangle BYF$ (2 $\angle$s equal). This yields the equality of ratios
+
+\begin{flalign*}
+  &&\frac{XB}{BD} &= \frac{FB}{BY}&\\
+  &\Leftrightarrow&XB \cdot BY &= FB \cdot BD = FB^2.&
+\end{flalign*}
+We deduce
+\begin{flalign*}
+  XB \cdot BY = FB^2 = BI^2 - IF^2 < BI^2.
+\end{flalign*}
+So (\ref{eqn:e2}) is indeed satisfied.
+
+
+
 
 \end{enumerate}
 
