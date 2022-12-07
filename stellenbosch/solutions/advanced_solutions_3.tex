@@ -29,7 +29,18 @@ Problem statement
 
 
 \item %
+For nonzero real numbers $a$, $b$, and $c$, show that
+\[ \frac{a}{b} +\frac{b}{c} +\frac{c}{a} = \frac{a}{c} +\frac{c}{b} +\frac{b}{a} \]
+if and only if two of $a$, $b$, and $c$ are equal.
 
+\textbf{Solution:} Observe the following computation:
+\begin{align*}
+\frac{a^{2}b + b^{2}c + c^{2}a}{abc} & = \frac{a^{2}c + b^{2}a + c^{2}b}{abc}\\
+ 0 & = \frac{a^{2}c + b^{2}a + c^{2}b -(a^{2}b + b^{2}c + c^{2}a)}{abc} \\
+ 0 & = \frac{abc + a^{2}c + b^{2}a + c^{2}b - (a^{2}b + b^{2}c + c^{2}a+abc)}{abc} \\
+ 0 & = \frac{(a-b)(b-c)(c-a)}{abc} \\
+\end{align*}
+One of $a-b$, $b-c$, $c-a$ must be zero, showing that some pair among $a$, $b$, $c$ must be equal.
 
 \item % Tsimerman
 Can you tile a $10\times 10\times 10$ cube with $4\times 1\times 1$ blocks? (Standard tiling rules apply---cover the whole volume, no overlaps, etc.)
