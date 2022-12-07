@@ -21,14 +21,53 @@
 \begin{enumerate}[itemsep=24pt]
 
 \item % Source of problem
+Given positive real numbers $a$, $b$, and $c$ such that $a^2+b^2+c^2 = 26$ and $ab+bc+ca = 19$, find the value of $a+b+c$.
+
+\textbf{Solution:} 
+\[(a+b+c)^2 = (a^2+b^2+c^2) + 2(ab + bc + ca) = 26 + 2\cdot 19 = 8^2\]
+\[\implies a+b+c = 8\]
 
 \item
+Find all positive integers $a$ and $b$ such that 
+$$a! + b! = 3^n -1 $$
+where $n$ is a positive integer.
 
+\textbf{Solution:} 
+W.L.O.G. let $a\geq b$\\
+
+Case $1$: $a,b\geq3$\\
+Note that $3|a!$ and $3|b!$, meaning $3|a!+b!$, but $3$ does not divide the RHS. Therefor there are no solutions for this case.\\
+
+Case $2$: $b=1$
+\begin{align*}
+    a!+1&=3^n-1\\
+    \implies \hspace{10mm} a!&=3^n-2 \hspace{15mm}
+\end{align*}
+if $a\geq3$ there are no solutions as $3$ will divide the RHS but not the LHS. Checking $a<3$ gives the solution $a=1, b=1, n=1$.\\
+
+Case $3$: $a\geq3, b=2$
+\begin{align*}
+    a!+2&=3^n-1\\
+    \implies \hspace{10mm} a!&=3^n-3 \hspace{10mm} \\
+    \implies \hspace{10mm} a!&=3(3^{n-1}-1) \hspace{7mm}
+\end{align*}
+if $a\geq6$ there are no solutions as $9$ will divide the RHS but not the LHS. Checking $a<6$ gives the solutions: $a=3, b=2, n=2$ and $a=4, b=2, n=3$
 
 \item 
 
 
 \item 
+For acute triangle $\triangle ABC$, a point $Z$ interior to $\triangle ABC$ satisfies $ZB = ZC$.
+Suppose points $X$ and $Y$ lie outside $\triangle ABC$ such that $\triangle XAB \mathop{|||} \triangle YCA \mathop{|||} \triangle ZBC$.
+Prove that $A,X,Y,Z$ are the vertices of a parallelogram. 
+
+\textbf{Solution:} $$\angle ZCY = \angle ZCA + \angle ACY = \angle ZCA + \angle BCZ = \angle BCA$$
+$$\frac{ZC}{BC} = \frac{YC}{AC} (\triangle ZCB \mathop{|||} \triangle YCA)$$
+Therefore $\triangle BCA \mathop{|||} \triangle ZCY$ as the sides are in proportion and they share a common angle. Similarly $\triangle BCA \mathop{|||} \triangle BZX$. 
+
+Since $BZ = ZC \implies \triangle BZX \equiv \triangle ZCY$
+$\implies XZ = YC = AY$ and $ZY = BX = XA$\\
+Therefore $AXZY$ is a parallelogram 
 
 
 \item
