@@ -1,0 +1,39 @@
+\documentclass{article}
+
+\usepackage{mathtools,amsfonts}
+\usepackage{enumitem}
+\usepackage{fullpage}
+\usepackage{fancyvrb}
+\usepackage{hyperref}
+%\usepackage{parskip}
+
+
+\begin{document}
+\thispagestyle{empty}
+
+\begin{center}
+  \textbf{Intermediate Test 2 Solutions}
+  \\ \vspace{1em}
+  \textbf{\large Stellenbosch Camp 2022}
+\end{center}
+
+
+\begin{enumerate}[itemsep=24pt]
+
+\item % Source of problem
+
+\item
+
+
+\item 
+
+
+\item 
+
+
+\item
+
+
+\end{enumerate}
+
+\end{document}
