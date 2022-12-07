@@ -2,7 +2,7 @@
 
 \usepackage{mathtools,amsfonts}
 \usepackage{enumitem}
-\usepackage{fullpage}
+\usepackage[cm]{fullpage}
 \usepackage{fancyvrb}
 \usepackage{hyperref}
 
@@ -22,20 +22,20 @@
 
 \bigskip
 
-\begin{enumerate}[itemsep=\fill]
+\begin{enumerate}[itemsep=24pt]
 
 \item 
 For acute triangle $\triangle ABC$, a point $Z$ interior to $\triangle ABC$ satisfies $ZB = ZC$.
 Suppose points $X$ and $Y$ lie outside $\triangle ABC$ such that $\triangle XAB \mathop{|||} \triangle YCA \mathop{|||} \triangle ZBC$.
 Prove that $A,X,Y,Z$ are the vertices of a parallelogram. 
 
-\textbf{Solution:} $$\angle ZCY = \angle ZCA + \angle ACY = \angle ZCA + \angle BCZ = \angle BCA$$
-$$\frac{ZC}{BC} = \frac{YC}{AC} (\triangle ZCB \mathop{|||} \triangle YCA)$$
-Therefore $\triangle BCA \mathop{|||} \triangle ZCY$ as the sides are in proportion and they share a common angle. Similarly $\triangle BCA \mathop{|||} \triangle BZX$. 
+\textbf{Solution:}
+$$\angle ZCY = \angle ZCA + \angle ACY = \angle ZCA + \angle BCZ = \angle BCA \implies \frac{ZC}{BC} = \frac{YC}{AC} \qquad (\triangle ZCB \mathop{|||} \triangle YCA).$$
+Therefore $\triangle BCA \mathop{|||} \triangle ZCY$ as the sides are proportional and they have a common angle. Similarly $\triangle BCA \mathop{|||} \triangle BZX$. 
 
-Since $BZ = ZC \implies \triangle BZX \equiv \triangle ZCY$
-$\implies XZ = YC = AY$ and $ZY = BX = XA$\\
-Therefore $AXZY$ is a parallelogram 
+Since $BZ = ZC \implies \triangle BZX \equiv \triangle ZCY \implies XZ = YC = AY$ and $ZY = BX = XA$.
+Therefore $AXZY$ is a parallelogram.
+
 
 \item %
 For nonzero real numbers $a$, $b$, and $c$, show that
@@ -44,23 +44,23 @@ if and only if two of $a$, $b$, and $c$ are equal.
 
 \textbf{Solution:} Observe the following computation:
 \begin{align*}
-\frac{a^{2}b + b^{2}c + c^{2}a}{abc} & = \frac{a^{2}c + b^{2}a + c^{2}b}{abc}\\
- 0 & = \frac{a^{2}c + b^{2}a + c^{2}b -(a^{2}b + b^{2}c + c^{2}a)}{abc} \\
- 0 & = \frac{abc + a^{2}c + b^{2}a + c^{2}b - (a^{2}b + b^{2}c + c^{2}a+abc)}{abc} \\
- 0 & = \frac{(a-b)(b-c)(c-a)}{abc} \\
+  0 &= \frac{a}{b} +\frac{b}{c} +\frac{c}{a} -\frac{a}{c} -\frac{c}{b} -\frac{b}{a} = \frac{a^{2}b + b^{2}c + c^{2}a}{abc} -\frac{a^{2}c + b^{2}a + c^{2}b}{abc} = \frac{a^{2}c + b^{2}a + c^{2}b -(a^{2}b + b^{2}c + c^{2}a)}{abc} \\
+  &= \frac{abc + a^{2}c + b^{2}a + c^{2}b - (a^{2}b + b^{2}c + c^{2}a+abc)}{abc} = \frac{(a-b)(b-c)(c-a)}{abc}.
 \end{align*}
 One of $a-b$, $b-c$, $c-a$ must be zero, showing that some pair among $a$, $b$, $c$ must be equal.
+
 
 \item % Tsimerman
 Can you tile a $10\times 10\times 10$ cube with $4\times 1\times 1$ blocks? (Standard tiling rules apply---cover the whole volume, no overlaps, etc.)
 
-\textbf{Solution:} The answer is no. Consider the following colouring: there are 10 `layers' to the cube. Label these layers from 1 to 10. For layers 1,2,5,6,9,10, we colour the layer as follows:
+\textbf{Solution:}
+The answer is no. Consider the following colouring: there are 10 `layers' to the cube. Label these layers from 1 to 10. For layers 1,2,5,6,9,10, we colour the layer as follows:
 \begin{center}
 \includegraphics[scale=0.5]{Capture.png}
 \end{center}
-For layers 3,4,7,8, we invert these colours.\\
-We note that each $4\times 1\times 1$ covers exactly 2 shaded blocks and 2 unshaded.\\
-But counting the total number of shaded blocks gives 504, while there are 496 unshaded blocks.\\
+For layers 3,4,7,8, we invert these colours.
+We note that each $4\times 1\times 1$ covers exactly 2 shaded blocks and 2 unshaded.
+But counting the total number of shaded blocks gives 504, while there are 496 unshaded blocks.
 Thus, we can not tile the shape as requested. 
 
 
@@ -84,13 +84,5 @@ If $a_1$ ends in a 6 and the second last digit is even, then $a_2=a_1+6$ ends in
 \item % 
 
 \end{enumerate}
-
-
-% ASCII art
-\centering
-\small
-\begin{BVerbatim}
-% Insert art here
-\end{BVerbatim}
 
 \end{document}
