@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass[12pt]{article}
 
 \usepackage{mathtools,amsfonts}
 \usepackage{enumitem}
@@ -31,7 +31,10 @@ Suppose points $X$ and $Y$ lie outside $\triangle ABC$ such that $\triangle XAB 
 Prove that $A,X,Y,Z$ are the vertices of a parallelogram. 
 
 \textbf{Solution:}
-$$\angle ZCY = \angle ZCA + \angle ACY = \angle ZCA + \angle BCZ = \angle BCA \implies \frac{ZC}{BC} = \frac{YC}{AC} \qquad (\triangle ZCB \mathrel{|||} \triangle YCA).$$
+\begin{align*}
+  &\mspace{48mu} \angle ZCY = \angle ZCA + \angle ACY = \angle ZCA + \angle BCZ = \angle BCA \\
+  &\implies \frac{ZC}{BC} = \frac{YC}{AC} \qquad (\triangle ZCB \mathrel{|||} \triangle YCA).
+\end{align*}
 Therefore $\triangle BCA \mathrel{|||} \triangle ZCY$ as the sides are proportional and they have a common angle. Similarly $\triangle BCA \mathrel{|||} \triangle BZX$. 
 
 Since $BZ = ZC \implies \triangle BZX \equiv \triangle ZCY \implies XZ = YC = AY$ and $ZY = BX = XA$.
@@ -95,7 +98,7 @@ If $a_1$ ends in a 6 and the second last digit is even, then $a_2=a_1+6$ ends in
 
 
 \item %  IMO Shortlist 1998 G3
-Let $I$ be the incenter of triangle $\triangle ABC$.
+Let $I$ be the incentre of triangle $\triangle ABC$.
 Let $D$, $E$ and $F$ be the points of tangency of the incircle of $\triangle ABC$ with $BC$, $CA$ and $AB$, respectively.
 The line $\ell$ passes through $B$ and is parallel to $DF$.
 The lines $ED$ and $EF$ intersect $\ell$ at the points $X$ and $Y$.
