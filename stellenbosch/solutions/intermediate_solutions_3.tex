@@ -1,0 +1,91 @@
+\documentclass{article}
+
+\usepackage{mathtools,amsfonts}
+\usepackage{enumitem}
+\usepackage{fullpage}
+\usepackage{fancyvrb}
+\usepackage{hyperref}
+%\usepackage{parskip}
+
+
+\begin{document}
+\thispagestyle{empty}
+
+\begin{center}
+  \textbf{Intermediate Test 2 Solutions}
+  \\ \vspace{1em}
+  \textbf{\large Stellenbosch Camp 2022}
+\end{center}
+
+
+\begin{enumerate}[itemsep=24pt]
+
+\item % Source of problem
+Given positive real numbers $a$, $b$, and $c$ such that $a^2+b^2+c^2 = 26$ and $ab+bc+ca = 19$, find the value of $a+b+c$.
+
+\textbf{Solution:} 
+\[(a+b+c)^2 = (a^2+b^2+c^2) + 2(ab + bc + ca) = 26 + 2\cdot 19 = 8^2\]
+\[\implies a+b+c = 8\]
+
+\item
+Find all positive integers $a$ and $b$ such that 
+$$a! + b! = 3^n -1 $$
+where $n$ is a positive integer.
+
+\textbf{Solution:} 
+W.L.O.G. let $a\geq b$\\
+
+Case $1$: $a,b\geq3$\\
+Note that $3|a!$ and $3|b!$, meaning $3|a!+b!$, but $3$ does not divide the RHS. Therefor there are no solutions for this case.\\
+
+Case $2$: $b=1$
+\begin{align*}
+    a!+1&=3^n-1\\
+    \implies \hspace{10mm} a!&=3^n-2 \hspace{15mm}
+\end{align*}
+if $a\geq3$ there are no solutions as $3$ will divide the RHS but not the LHS. Checking $a<3$ gives the solution $a=1, b=1, n=1$.\\
+
+Case $3$: $a\geq3, b=2$
+\begin{align*}
+    a!+2&=3^n-1\\
+    \implies \hspace{10mm} a!&=3^n-3 \hspace{10mm} \\
+    \implies \hspace{10mm} a!&=3(3^{n-1}-1) \hspace{7mm}
+\end{align*}
+if $a\geq6$ there are no solutions as $9$ will divide the RHS but not the LHS. Checking $a<6$ gives the solutions: $a=3, b=2, n=2$ and $a=4, b=2, n=3$
+
+\item % Tsimerman
+Show that if every room in a house has an even number of doors, then the number of outside entrance doors must be even as well.
+
+\textbf{Solution:} Let $a_0, a_1, \dots, a_n$ be the number of doors you can see in room $i$ with $a_0$ being the number of outside doors. Notice that every door is counted twice so that $\sum_{i=0}^{n}a_i \equiv 0 \pmod 2$. Now since each door has an even number of rooms, we have $\sum_{i=1}^{n}a_i \equiv 0 \pmod 2$ so that $a_0 \equiv 0 \pmod 2$ as required. 
+
+
+\item 
+For acute triangle $\triangle ABC$, a point $Z$ interior to $\triangle ABC$ satisfies $ZB = ZC$.
+Suppose points $X$ and $Y$ lie outside $\triangle ABC$ such that $\triangle XAB \mathop{|||} \triangle YCA \mathop{|||} \triangle ZBC$.
+Prove that $A,X,Y,Z$ are the vertices of a parallelogram. 
+
+\textbf{Solution:} $$\angle ZCY = \angle ZCA + \angle ACY = \angle ZCA + \angle BCZ = \angle BCA$$
+$$\frac{ZC}{BC} = \frac{YC}{AC} (\triangle ZCB \mathop{|||} \triangle YCA)$$
+Therefore $\triangle BCA \mathop{|||} \triangle ZCY$ as the sides are in proportion and they share a common angle. Similarly $\triangle BCA \mathop{|||} \triangle BZX$. 
+
+Since $BZ = ZC \implies \triangle BZX \equiv \triangle ZCY$
+$\implies XZ = YC = AY$ and $ZY = BX = XA$\\
+Therefore $AXZY$ is a parallelogram 
+
+
+\item
+For nonzero real numbers $a$, $b$, and $c$, show that
+\[ \frac{a}{b} +\frac{b}{c} +\frac{c}{a} = \frac{a}{c} +\frac{c}{b} +\frac{b}{a} \]
+if and only if two of $a$, $b$, and $c$ are equal.
+
+\textbf{Solution:} Observe the following computation:
+\begin{align*}
+\frac{a^{2}b + b^{2}c + c^{2}a}{abc} & = \frac{a^{2}c + b^{2}a + c^{2}b}{abc}\\
+ 0 & = \frac{a^{2}c + b^{2}a + c^{2}b -(a^{2}b + b^{2}c + c^{2}a)}{abc} \\
+ 0 & = \frac{abc + a^{2}c + b^{2}a + c^{2}b - (a^{2}b + b^{2}c + c^{2}a+abc)}{abc} \\
+ 0 & = \frac{(a-b)(b-c)(c-a)}{abc} \\
+\end{align*}
+One of $a-b$, $b-c$, $c-a$ must be zero, showing that some pair among $a$, $b$, $c$ must be equal.
+
+\end{enumerate}
+\end{document}
