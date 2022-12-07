@@ -24,9 +24,18 @@
 
 \begin{enumerate}[itemsep=\fill]
 
-\item % Source of problem
-Problem statement
+\item 
+For acute triangle $\triangle ABC$, a point $Z$ interior to $\triangle ABC$ satisfies $ZB = ZC$.
+Suppose points $X$ and $Y$ lie outside $\triangle ABC$ such that $\triangle XAB \mathop{|||} \triangle YCA \mathop{|||} \triangle ZBC$.
+Prove that $A,X,Y,Z$ are the vertices of a parallelogram. 
 
+\textbf{Solution:} $$\angle ZCY = \angle ZCA + \angle ACY = \angle ZCA + \angle BCZ = \angle BCA$$
+$$\frac{ZC}{BC} = \frac{YC}{AC} (\triangle ZCB \mathop{|||} \triangle YCA)$$
+Therefore $\triangle BCA \mathop{|||} \triangle ZCY$ as the sides are in proportion and they share a common angle. Similarly $\triangle BCA \mathop{|||} \triangle BZX$. 
+
+Since $BZ = ZC \implies \triangle BZX \equiv \triangle ZCY$
+$\implies XZ = YC = AY$ and $ZY = BX = XA$\\
+Therefore $AXZY$ is a parallelogram 
 
 \item %
 For nonzero real numbers $a$, $b$, and $c$, show that
