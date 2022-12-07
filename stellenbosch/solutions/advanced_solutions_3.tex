@@ -56,6 +56,20 @@ Thus, we can not tile the shape as requested.
 
 
 \item % 
+Consider an infinite sequence $(a_n)_{n=0}^{\infty}$ of positive integers such that for $n \geq 0$, we have that
+\[
+    a_{n + 1} = a_n + b_n
+\]
+where $b_n$ is the last (units) decimal digit of $a_n$. Show that the sequence contains infinitely many powers of $2$ if and only if $a_0$ is not a multiple of $5$.
+
+\textbf{Solution:} If $a_0$ is a multiple of 5, it will end in a 0 or 5 and be at least as big as 5. $a_1$ will then end in a 0, and the sequence becomes constant.\\
+Assume $a_0$ is not a multiple of 5. $a_1$ will end in an even digit. We will now continue to cycle through the last digits $2\rightarrow 4 \rightarrow 8 \rightarrow 6$, whose sum is 20. Thus, we will obtain all numbers of the form $a_1+20k$.\\
+We look at the last two digits of $2^n$ and note that they will repeat in the pattern $$\textbf{04}, 08, 16, 32, 64, 28, 56, 12, 24, 48, 96, 92, 84, 68, 36, 72, 44, 88, 76, 52, \textbf{04}, 08, ...$$
+If the second last digit of $a_1$ is even and the last digit is 4 or 8, then we will obtain all powers of 2 ending in 4 or 8. If the second last digit is odd and the last digit is 2 or 6, we will obtain all powers of 2 ending in 2 or 6.\\
+If $a_1$ ends in a 4, and the second last digit is odd, then $a_4$ will be $a_1+18$, which will end in a 2 and have the second last digit odd. We will now obtain all numbers of the form $a_4+20k$, which again gives infinite powers of 2.\\
+If $a_1$ ends in a 8 and the second last digit is odd, then $a_3=a_1+14$ will end in a 2 and the second last digit will be odd. A similar argument applies.\\
+If $a_1$ ends in a 2 and the second last digit is even, then $a_2=a_1+2$ ends in a 4 and the second last digit is even.\\
+If $a_1$ ends in a 6 and the second last digit is even, then $a_2=a_1+6$ ends in a 2 and the second last digit is odd.
 
 
 \item % 
