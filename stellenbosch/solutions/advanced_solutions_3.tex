@@ -31,7 +31,17 @@ Problem statement
 \item %
 
 
-\item % 
+\item % Tsimerman
+Can you tile a $10\times 10\times 10$ cube with $4\times 1\times 1$ blocks? (Standard tiling rules apply---cover the whole volume, no overlaps, etc.)
+
+\textbf{Solution:} The answer is no. Consider the following colouring: there are 10 `layers' to the cube. Label these layers from 1 to 10. For layers 1,2,5,6,9,10, we colour the layer as follows:
+\begin{center}
+\includegraphics[scale=0.5]{Capture.png}
+\end{center}
+For layers 3,4,7,8, we invert these colours.\\
+We note that each $4\times 1\times 1$ covers exactly 2 shaded blocks and 2 unshaded.\\
+But counting the total number of shaded blocks gives 504, while there are 496 unshaded blocks.\\
+Thus, we can not tile the shape as requested. 
 
 
 \item % 
