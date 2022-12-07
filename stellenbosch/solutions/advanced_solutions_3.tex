@@ -46,7 +46,12 @@ For nonzero real numbers $a$, $b$, and $c$, show that
 \[ \frac{a}{b} +\frac{b}{c} +\frac{c}{a} = \frac{a}{c} +\frac{c}{b} +\frac{b}{a} \]
 if and only if two of $a$, $b$, and $c$ are equal.
 
-\textbf{Solution:} Observe the following computation:
+\textbf{Solution:} If some pair of $a$, $b$, $c$ are equal, we can assume without loss of generality that $a$ = $b$ since the equation is symmetric.
+This yields:
+\begin{align*}
+    1 +\frac{a}{c} +\frac{c}{a} = \frac{a}{c} +\frac{c}{a} +1
+\end{align*}
+Which is true. To show that some pair of $a$, $b$, $c$ are equal given the expression, observe the following computation:
 \begin{align*}
   \frac{a}{b} +\frac{b}{c} +\frac{c}{a} &= \frac{a}{c} +\frac{c}{b} +\frac{b}{a} \\
   \iff 0 &= \frac{a}{b} +\frac{b}{c} +\frac{c}{a} -\frac{a}{c} -\frac{c}{b} -\frac{b}{a} \\
