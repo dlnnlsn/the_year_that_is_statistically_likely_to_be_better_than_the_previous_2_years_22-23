@@ -53,7 +53,10 @@ Case $3$: $a\geq3, b=2$
 \end{align*}
 if $a\geq6$ there are no solutions as $9$ will divide the RHS but not the LHS. Checking $a<6$ gives the solutions: $a=3, b=2, n=2$ and $a=4, b=2, n=3$
 
-\item 
+\item % Tsimerman
+Show that if every room in a house has an even number of doors, then the number of outside entrance doors must be even as well.
+
+\textbf{Solution:} Let $a_0, a_1, \dots, a_n$ be the number of doors you can see in room $i$ with $a_0$ being the number of outside doors. Notice that every door is counted twice so that $\sum_{i=0}^{n}a_i \equiv 0 \pmod 2$. Now since each door has an even number of rooms, we have $\sum_{i=1}^{n}a_i \equiv 0 \pmod 2$ so that $a_0 \equiv 0 \pmod 2$ as required. 
 
 
 \item 
