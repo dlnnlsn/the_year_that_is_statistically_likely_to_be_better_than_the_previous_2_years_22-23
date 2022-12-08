@@ -29,6 +29,20 @@ Problem statement
 
 
 \item %
+Show that $2022 \times 2^n$ can be written as the sum of three distinct non-zero squares for every natural number $n$.
+
+\textbf{Solution:}
+Note that $1011 = 31^2 + 7^2 + 1^2$ and $2022 = 43^2 + 13^2 + 2^2$.
+
+If $n$ is odd, let $n = 2k + 1$. Then we have that
+\[
+    2022 \times 2^n = 1011 \times 2^{2k + 2} = \left( 31^2 + 7^2 + 1^2 \right) \times {\left( 2^{k + 1} \right)}^2 = {\left( 31 \times 2^{k + 1} \right)}^2 + {\left( 7 \times 2^{k + 1} \right)}^2 + {\left( 1 \times 2^{k + 1} \right)}^2.
+\]
+
+Similarly, if $n$ is even, let $n = 2k$. Then we have that
+\[
+    2022 \times 2^n = 2022 \times 2^{2k} = \left( 43^2 + 13^2 + 2^2 \right) \times {\left( 2^{k} \right)}^2 = {\left( 43 \times 2^{k} \right)}^2 + {\left( 13 \times 2^{k} \right)}^2 + {\left( 2 \times 2^{k} \right)}^2.
+\]
 
 
 \item % Andrew McGregor, 2022.
