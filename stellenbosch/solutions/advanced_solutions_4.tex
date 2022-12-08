@@ -37,7 +37,17 @@ A triple of positive real numbers $(a,b,c)$ is called \textit{good} if $a,b,c$ a
 \textbf{Solution:}
 Notice that if $(\sqrt{a},\sqrt{b},\sqrt{c})$ is \textit{cute}, then $\sqrt{a}^2 + \sqrt{b}^2 > \sqrt{c}^2$ for all permutatios of $(a,b,c)$ (Pythagoras' inequality) so $(\sqrt{a}^2,\sqrt{b}^2,\sqrt{c}^2)=(a,b,c)$ is \textit{good}.
 
-If $(a,b,c)$ is good we note that it is sufficient to prove that $(\sqrt{a},\sqrt{b},\sqrt{c})$ is \textit{good} as 
+If $(a,b,c)$ is good we note that it is sufficient to prove that $(\sqrt{a},\sqrt{b},\sqrt{c})$ is \textit{good} as Pythagoras' inequality would be trivialy satisfied. Use the Ravi substitution $a=x+y,b=y+z,c=z+x$ where $x,y,z>0$. Then
+\begin{flalign*}
+  \sqrt{a}+\sqrt{b} &= \sqrt{x+y} +\sqrt{y+z}\\
+  &= \sqrt{\left( \sqrt{x+y} +\sqrt{y+z} \right)^2 }\\
+  &= \sqrt{\left( x+y +y+z + 2\sqrt{(x+y)(y+z)}\right) }\\
+  &= \sqrt{\left( x+z + (2y+ 2\sqrt{(x+y)(y+z)})\fight) }\\
+  &> \sqrt{x+z}\\
+  &= \sqrt{c}\\
+\end{flalign*}
+Similarly for $\sqrt{a}+\sqrt{c} >\sqrt{b}$ and $\sqrt{b}+\sqrt{c} >\sqrt{a}$.
+
 
 
 \item % 
