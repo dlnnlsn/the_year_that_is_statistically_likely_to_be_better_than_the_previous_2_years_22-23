@@ -1,0 +1,111 @@
+\documentclass{article}
+
+\usepackage{mathtools,amsfonts}
+\usepackage{enumitem}
+\usepackage{fullpage}
+\usepackage{fancyvrb}
+\usepackage{hyperref}
+\usepackage{parskip}
+
+
+\begin{document}
+\thispagestyle{empty}
+
+\begin{center} \bfseries
+  \Large Intermediate Test 4 Solutions
+  \\ \vspace{12pt}
+  \large Stellenbosch Camp 2022
+\end{center}
+
+\bigskip \bigskip
+
+\begin{enumerate}[itemsep=24pt]
+
+\item % Phil
+At a certain maths camp, there are ten coaches to be allocated to three groups: two for beginner, four for intermediate and four for advanced.
+However, two of the coaches, Tim and Emile, insist that they not be allocated to the same group.
+How many ways can we allocate the coaches to the four different groups?
+
+\textbf{Solution:}
+We can count the total number of allocations of coaches, and then subtract those which have Tim and Emile allocated to the same group.
+Since there are $\binom{10}{2}$ ways to choose two Beginner coaches, then $\binom{8}{4}$ ways to choose four Intermediate coaches, and then $\binom{4}{4}$ for the remaining four coaches to be allocated to Advanced, the total number of allocations is $\binom{10}{2} \times \binom{8}{4} \times \binom {4}{4} = 45 \times 70 \times 1 = 3150$.
+
+Now to count the number of allocations in which Tim and Emile are in the same group, we can split into cases depending on which group they have been allocated to:
+\begin{description}
+  \item[Beginner:] In this case, four of the rest of the coaches are to be allocated to Intermediate in $\binom{8}{4} = 70$ ways, and the rest to Advanced in $\binom{4}{4} = 1$ ways, giving $70$ ways in total.
+  \item[Intermediate:] In this case, we need two more coaches for Intermediate, in $\binom{8}{2} = 28$ ways, two more coaches for Beginner, in $\binom{6}{2} = 15$ ways, and four more coaches for Advanced in $\binom{4}{4} = 1$ ways, giving $28 \times 15 = 420$ ways in total.
+  \item[Advanced:] This case is analogous to the Intermediate case, giving $420$ ways in total.
+\end{description}
+Thus there are $3150 -70 -420 -420 = 2240$ ways to allocate the coaches while keeping Tim and Emile apart.
+
+
+\item
+Find all polynomials $P$ such that $P(x+1) - P(x) = 8$ for $x\in\mathbb{R}$.
+
+\textbf{Solution:} Notice that 0 is a root of the polynomial $P(x) - P(0)$, thus, by the Factor Theorem there exists a polynomial $Q(x)$ such that $P(x) = xQ(x) + P(0)$.
+Substituting this polynomial into the main equation yields:
+\begin{align*}
+  8 = P(x+1) - P(x) & = (x+1)Q(x + 1) - xQ(x) \\
+          -Q(x) + 8 & = (x+1)(Q(x+1) - Q(x))
+\end{align*}
+Thus $-1$ is a factor of the polynomial $-Q(x) + 8$, so from the Factor Theorem there exists a polynomial $R(x)$ such that $(x+1)R(x) = - Q(x) + 8$.
+This gives:
+\begin{align*}
+  8 & = (x+1)(-(x+2)R(x+1) + 8) - x(-(x+1)R(x) + 8) \\
+  \iff -x(x+1)R(x) + 8x + 8 & = -(x+1)(x+2)R(x+1) + 8(x+1) \\
+  \iff -x(x+1)R(x) & = -(x+1)(x+2)R(x+1)
+\end{align*}
+
+Let $T(x) = -x(x+1)R(x)$, we have $T(x) = T(x+1)$ for all $x \in \mathbb{R}$ It can easily be shown by that $T(n) = T(0)$ for all natural $n$.
+Therefore the polynomial $T(x) - T(0)$ has infinitely many roots and thus $T(x) - T(0) = 0$ $\Rightarrow$ $-x(x+1)R(x) = T(0)$, and $-x(x+1)R(x)$ is only constant if $R(x) = 0$ $\Rightarrow$ $0 = -Q(x) + 8$ $\Rightarrow$ $P(x) = 8x + P(0).$
+
+
+\item % 2022, Malwande
+Let $\Gamma$ be the incircle of acute triangle $\triangle ABC$ with tangency points $D$ and $E$ on sides $BC$ and $CA$ respectively.
+Let $X$ be a point on $AC$ such that $BX \parallel DE$.
+Let $Y$ be the point where the angle bisector of $C$ meets $AB$.
+Prove that $XY$ is tangent to $\Gamma$.
+
+\textbf{Solution:}
+Note $CE = CD$ as they are both tangents to $\Gamma$ from $C$, meaning $\triangle CED$ is isosceles and $CY$ is the perpendicular bisector. Since $BX \parallel DE$, we have that $\triangle CXB$ is also isosceles with $CY$ as the perpendicular bisector.
+
+Now consider the line $CY$. Note that $E$ is the reflection of $D$ through $CY$, and similarly $X$ is the reflection of $B$ through $CY$. Since $BY$ is tangent to $\Gamma$, the reflection $XY$ is also tangent.
+
+
+\item % Emile, 2022
+You have an $n \times n$ chessboard which starts with all its squares white.
+An operation involves choosing a row or column and flipping the colour of every square in this row or column between white and black.
+Is it possible that for all $0 \leq k \leq n^2$, you can do some sequence of operations and end up with $k$ black squares?
+
+\textbf{Solution:}
+First note that performing a flip on a row or column twice is the same as having not performed a flip at all.
+Secondly note that the order of flips do not matter.
+Let there be $p$ row-flips and $q$ column-flips, with $0\leq p,q\leq n$.
+The number of values of $k$ we can achieve with a series of operations is less than or equal to the number of ordered pairs $(p,q)$, which we will define as $S_n$.
+The ordered restriction is due to $(p,q)$ and $(q,p)$ yielding the same number of black squares.
+If $S_n$ is less than the number of squares on the board, then there will exist some number of $k$ black squares we cannot achieve.
+Therefore we need that:
+$$S_n = \frac{(n+1)(n+2)}{2} \geq n^2 + 1$$
+which is only true for $n\leq3$.
+Checking the number of black squares for these cases with all the possible pairs $(p,q)$ shows that only the $n=1$ case is possible.
+
+
+\item
+Show that $2022 \times 2^n$ can be written as the sum of three distinct non-zero squares for every natural number $n$.
+
+\textbf{Solution:}
+Note that $1011 = 31^2 + 7^2 + 1^2$ and $2022 = 43^2 + 13^2 + 2^2$.
+
+If $n$ is odd, let $n = 2k + 1$. Then we have that
+\[
+    2022 \times 2^n = 1011 \times 2^{2k + 2} = \left( 31^2 + 7^2 + 1^2 \right) \times {\left( 2^{k + 1} \right)}^2 = {\left( 31 \times 2^{k + 1} \right)}^2 + {\left( 7 \times 2^{k + 1} \right)}^2 + {\left( 1 \times 2^{k + 1} \right)}^2.
+\]
+
+Similarly, if $n$ is even, let $n = 2k$. Then we have that
+\[
+    2022 \times 2^n = 2022 \times 2^{2k} = \left( 43^2 + 13^2 + 2^2 \right) \times {\left( 2^{k} \right)}^2 = {\left( 43 \times 2^{k} \right)}^2 + {\left( 13 \times 2^{k} \right)}^2 + {\left( 2 \times 2^{k} \right)}^2.
+\]
+
+\end{enumerate}
+
+\end{document}

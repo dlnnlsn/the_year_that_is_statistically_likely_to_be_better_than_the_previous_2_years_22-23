@@ -5,52 +5,103 @@
 \usepackage{fullpage}
 \usepackage{fancyvrb}
 \usepackage{hyperref}
+\usepackage{parskip}
 
 
 \begin{document}
 \thispagestyle{empty}
 
 \begin{center}
-  \textbf{\Large Advanced Solutions 4}
-  % LEVEL is Senior, Intermediate or Beginner
-  % NUMBER is the test number: 1, 2, etc.
+  \textbf{\Large Advanced Test 4 Solutions}
   \\ \vspace{1em}
   \textbf{\large Stellenbosch Camp 2022}
-  \\ \vspace{1em}
 \end{center}
 
-\bigskip
+\bigskip \bigskip
 
-\begin{enumerate}[itemsep=\fill]
+\begin{enumerate}[itemsep=24pt]
 
-\item % Source of problem
-Problem statement
+\item % Emile, 2022
+You have an $n \times n$ chessboard which starts with all its squares white.
+An operation involves choosing a row or column and flipping the colour of every square in this row or column between white and black.
+Is it possible that for all $0 \leq k \leq n^2$, you can do some sequence of operations and end up with $k$ black squares?
+
+\textbf{Solution:}
+First note that performing a flip on a row or column twice is the same as having not performed a flip at all. Secondly note that the order of flips do not matter. Let there be $p$ row-flips and $q$ column-flips, with $0\leq p,q\leq n$. The number of values of $k$ we can achieve with a series of operations is less than or equal to the number of ordered pairs $(p,q)$, which we will define as $S_n$. The ordered restriction is due to $(p,q)$ and $(q,p)$ yielding the same number of black squares. If $S_n$ is less than the number of squares on the board, then there will exist some number of $k$ black squares we cannot achieve. Therefore we need that:
+$$S_n = \frac{(n+1)(n+2)}{2} \geq n^2 + 1$$
+Which is only true for $n\leq3$. Checking the number of black squares for these cases with all the possible pairs $(p,q)$ shows that only the $n=1$ case is possible.
 
 
 \item %
+Show that $2022 \times 2^n$ can be written as the sum of three distinct non-zero squares for every natural number $n$.
+
+\textbf{Solution:}
+Note that $1011 = 31^2 + 7^2 + 1^2$ and $2022 = 43^2 + 13^2 + 2^2$.
+
+If $n$ is odd, let $n = 2k + 1$. Then we have that
+\[
+    2022 \times 2^n = 1011 \times 2^{2k + 2} = \left( 31^2 + 7^2 + 1^2 \right) \times {\left( 2^{k + 1} \right)}^2 = {\left( 31 \times 2^{k + 1} \right)}^2 + {\left( 7 \times 2^{k + 1} \right)}^2 + {\left( 1 \times 2^{k + 1} \right)}^2.
+\]
+
+Similarly, if $n$ is even, let $n = 2k$. Then we have that
+\[
+    2022 \times 2^n = 2022 \times 2^{2k} = \left( 43^2 + 13^2 + 2^2 \right) \times {\left( 2^{k} \right)}^2 = {\left( 43 \times 2^{k} \right)}^2 + {\left( 13 \times 2^{k} \right)}^2 + {\left( 2 \times 2^{k} \right)}^2.
+\]
 
 
 \item % Andrew McGregor, 2022.
 A triple of positive real numbers $(a,b,c)$ is called \textit{good} if $a,b,c$ are the side lengths of a non-degenerate triangle, and \textit{cute} if $a,b,c$ are the sides of an acute angled triangle. Prove that $(a,b,c)$ is \textit{good} if and only if $(\sqrt{a},\sqrt{b},\sqrt{c})$ is \textit{cute}. 
 
-\textbf{Solution:} Notice that if $(\sqrt{a},\sqrt{b},\sqrt{c})$ is \textit{cute}, then $\sqrt{a}^2 + \sqrt{b}^2 > \sqrt{c}^2$ for all permutatios of $(a,b,c)$ (Pythagoras' inequality) so $(\sqrt{a}^2,\sqrt{b}^2,\sqrt{c}^2)=(a,b,c)$ is \textit{good}.\\
+\textbf{Solution:}
+Notice that if $(\sqrt{a},\sqrt{b},\sqrt{c})$ is \textit{cute}, then $\sqrt{a}^2 + \sqrt{b}^2 > \sqrt{c}^2$ for all permutatios of $(a,b,c)$ (Pythagoras' inequality) so $(\sqrt{a}^2,\sqrt{b}^2,\sqrt{c}^2)=(a,b,c)$ is \textit{good}.
 
-If $(a,b,c)$ is good we note that it is sufficient to prove that $(\sqrt{a},\sqrt{b},\sqrt{c})$ is \textit{good} as 
+If $(a,b,c)$ is good we note that it is sufficient to prove that $(\sqrt{a},\sqrt{b},\sqrt{c})$ is \textit{good} as Pythagoras' inequality would be trivialy satisfied. Use the Ravi substitution $a=x+y,b=y+z,c=z+x$ where $x,y,z>0$. Then
+\begin{flalign*}
+  \sqrt{a}+\sqrt{b} &= \sqrt{x+y} +\sqrt{y+z}\\
+  &= \sqrt{\left( \sqrt{x+y} +\sqrt{y+z} \right)^2 }\\
+  &= \sqrt{\left( x+y +y+z + 2\sqrt{(x+y)(y+z)}\right) }\\
+  &= \sqrt{\left( x+z + (2y+ 2\sqrt{(x+y)(y+z)})\right) }\\
+  &> \sqrt{x+z}\\
+  &= \sqrt{c}
+\end{flalign*}
+Similarly, $\sqrt{a}+\sqrt{c} >\sqrt{b}$ and $\sqrt{b}+\sqrt{c} >\sqrt{a}$.
 
 
-\item % 
+
+\item % % Baltic Way 1994
+The incircle of $\triangle ABC$ is tangent to $BC,CA,$ and $AB$ at $D,E,$ and $F$ respectively.
+$P$, $Q$, and $R$ are the incenters of $\triangle AEF$, $\triangle BFD$, and $\triangle CDE$ respectively.
+Prove that $DP$, $EQ$, and $RS$ are concurrent.
+
+\textbf{Solution:}
+Let the point $P'$ be the intersection of $AI$ and the incircle. Notice that $\angle AFP' = \angle P'EF = \angle P'FE$ (tan-chord, angles subtended by equal sides) therefore $FP'$ is the angle bisector of $\angle AFE$, so $P'=P$ is the incentre of $\triangle AFE$.
+Similarly we deduce $Q$ and $R$ are the intersections of $BI$ and $CI$ with the incircle respectively.
+Then $\angle PDF = \angle PDE$ (angles subtended by equal sides) so $DP$ is the angle bisector of $\angle FDE$.
+Similarly we deduce that $EQ$ and $FR$ are angle bisectors of $\angle DEF$ and $\angle EFD$ respectively.
+The three lines intersect at the incenter of $\triangle DEF$ and are therefore concurrent.
 
 
-\item % 
+\item % Tsimelman, 2022
+Every point in space is coloured red, blue, or green. Prove that for at least one of the 3 colours, the set of distances between points of that colour contains all positive real numbers.
+
+\textbf{Solution:}
+Assume for contradiction that none of the colours has this property.
+Let $x_R$ be a positive real number for which there are no two red points having this distance between them.
+Similarly, let $x_B$ and $x_G$ be such a real number for the colours blue and green respectively.
+Assume W.L.O.G. that $x_R\geq x_B \geq x_G$.
+Start by selecting a red point.
+If no such point exists, select a blue point.
+If no such point exists, we only have green points and we reach a clear contradiction.
+If a blue point does exist (but a red point does not), all points in a shell of radius $x_B$ around that point must be green.
+Then we have two green points on this shell with distance $x_G$ between them, since $x_G\leq x_B$, which is a contradiction.
+
+Finally, if our red point does exist, every point in a shell of radius $x_R$ around it must be either blue or green.
+Select a blue point on this shell.
+If no such point exists, this whole shell is green and there must exist two points on this shell with distance $x_G$ between them, a contradiction.
+If the blue point does exist, we consider the intersection of the shell around our blue point with radius $x_B$ and the shell around our red point with radius $x_R$.
+This intersection is a circle with radius at least $\frac{x_B}{\sqrt{2}}$, which means it has diameter larger than $x_B$.
+All points on this circle must be green, but there will exist two of them with distance $x_G$, a contradiction.
 
 \end{enumerate}
-
-
-% ASCII art
-\centering
-\small
-\begin{BVerbatim}
-% Insert art here
-\end{BVerbatim}
 
 \end{document}
