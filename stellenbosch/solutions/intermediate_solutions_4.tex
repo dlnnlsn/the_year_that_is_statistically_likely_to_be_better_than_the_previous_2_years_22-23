@@ -21,7 +21,22 @@
 
 \begin{enumerate}[itemsep=24pt]
 
-\item % Source of problem
+\item % Phil
+At a certain maths camp, there are ten coaches to be allocated to three groups: two for beginner, four for intermediate and four for advanced.
+However, two of the coaches, Tim and Emile, insist that they not be allocated to the same group.
+How many ways can we allocate the coaches to the four different groups?
+
+\textbf{Solution:}
+We can count the total number of allocations of coaches, and then subtract those which have Tim and Emile allocated to the same group.
+Since there are $\binom{10}{2}$ ways to choose two Beginner coaches, then $\binom{8}{4}$ ways to choose four Intermediate coaches, and then $\binom{4}{4}$ for the remaining four coaches to be allocated to Advanced, the total number of allocations is $\binom{10}{2} \times \binom{8}{4} \times \binom {4}{4} = 45 \times 70 \times 1 = 3150$.
+
+Now to count the number of allocations in which Tim and Emile are in the same group, we can split into cases depending on which group they have been allocated to:
+\begin{description}
+  \item[Beginner:] In this case, four of the rest of the coaches are to be allocated to Intermediate in $\binom{8}{4} = 70$ ways, and the rest to Advanced in $\binom{4}{4} = 1$ ways, giving $70$ ways in total.
+  \item[Intermediate:] In this case, we need two more coaches for Intermediate, in $\binom{8}{2} = 28$ ways, two more coaches for Beginner, in $\binom{6}{2} = 15$ ways, and four more coaches for Advanced in $\binom{4}{4} = 1$ ways, giving $28 \times 15 = 420$ ways in total.
+  \item[Advanced:] This case is analogous to the Intermediate case, giving $420$ ways in total.
+\end{description}
+Thus there are $3150 -70 -420 -420 = 2240$ ways to allocate the coaches while keeping Tim and Emile apart.
 
 
 \item
