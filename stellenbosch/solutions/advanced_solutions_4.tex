@@ -5,6 +5,7 @@
 \usepackage{fullpage}
 \usepackage{fancyvrb}
 \usepackage{hyperref}
+\usepackage{parskip}
 
 
 \begin{document}
@@ -19,7 +20,7 @@
   \\ \vspace{1em}
 \end{center}
 
-\bigskip
+\bigskip \bigskip
 
 \begin{enumerate}[itemsep=\fill]
 
@@ -33,7 +34,8 @@ Problem statement
 \item % Andrew McGregor, 2022.
 A triple of positive real numbers $(a,b,c)$ is called \textit{good} if $a,b,c$ are the side lengths of a non-degenerate triangle, and \textit{cute} if $a,b,c$ are the sides of an acute angled triangle. Prove that $(a,b,c)$ is \textit{good} if and only if $(\sqrt{a},\sqrt{b},\sqrt{c})$ is \textit{cute}. 
 
-\textbf{Solution:} Notice that if $(\sqrt{a},\sqrt{b},\sqrt{c})$ is \textit{cute}, then $\sqrt{a}^2 + \sqrt{b}^2 > \sqrt{c}^2$ for all permutatios of $(a,b,c)$ (Pythagoras' inequality) so $(\sqrt{a}^2,\sqrt{b}^2,\sqrt{c}^2)=(a,b,c)$ is \textit{good}.\\
+\textbf{Solution:}
+Notice that if $(\sqrt{a},\sqrt{b},\sqrt{c})$ is \textit{cute}, then $\sqrt{a}^2 + \sqrt{b}^2 > \sqrt{c}^2$ for all permutatios of $(a,b,c)$ (Pythagoras' inequality) so $(\sqrt{a}^2,\sqrt{b}^2,\sqrt{c}^2)=(a,b,c)$ is \textit{good}.
 
 If $(a,b,c)$ is good we note that it is sufficient to prove that $(\sqrt{a},\sqrt{b},\sqrt{c})$ is \textit{good} as 
 
@@ -44,13 +46,5 @@ If $(a,b,c)$ is good we note that it is sufficient to prove that $(\sqrt{a},\sqr
 \item % 
 
 \end{enumerate}
-
-
-% ASCII art
-\centering
-\small
-\begin{BVerbatim}
-% Insert art here
-\end{BVerbatim}
 
 \end{document}
