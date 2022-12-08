@@ -67,7 +67,11 @@ Similarly for $\sqrt{a}+\sqrt{c} >\sqrt{b}$ and $\sqrt{b}+\sqrt{c} >\sqrt{a}$.
 \item % 
 
 
-\item % 
+\item % Tsimelman, 2022
+Every point in space is coloured red, blue, or green. Prove that for at least one of the 3 colours, the set of distances between points of that colour contains all positive real numbers.
+
+\textbf{Solution:} Assume for contradiction that none of the colours has this property. Let $x_R$ be a positive real number for which there are no two red points having this distance between them. Similarly, let $x_B$ and $x_G$ be such a real number for the colours blue and green respectively. Assume W.L.O.G. that $x_R\geq x_B \geq x_G$. Start by selecting a red point. If no such point exists, select a blue point. If no such point exists, we only have green points and we reach a clear contradiction. If a blue point does exist (but a red point does not), all points in a shell of radius $x_B$ around that point must be green. Then we have two green points on this shell with distance $x_G$ between them, since $x_G\leq x_B$, which is a contradiction.\\
+Finally, if our red point does exist, every point in a shell of radius $x_R$ around it must be either blue or green. Select a blue point on this shell. If no such point exists, this whole shell is green and there must exist two points on this shell with distance $x_G$ between them, a contradiction. If the blue point does exist, we consider the intersection of the shell around our blue point with radius $x_B$ and the shell around our red point with radius $x_R$. This intersection is a circle with radius at least $\frac{x_B}{\sqrt{2}}$, which means it has diameter larger than $x_B$. All points on this circle must be green, but there will exist two of them with distance $x_G$, a contradiction.
 
 \end{enumerate}
 
