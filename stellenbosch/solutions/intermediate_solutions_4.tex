@@ -40,28 +40,34 @@ Thus there are $3150 -70 -420 -420 = 2240$ ways to allocate the coaches while ke
 
 
 \item
-\textbf{Solution:} Notice that 0 is a root of the polynomial $P(x) - P(0)$, thus, by the Factor Theorem. There exists a polynomial $Q(x)$ such that $P(x) = xQ(x) + P(0)$. Substituting this polynomial into the main equation yields:
+Find all polynomials $P$ such that $P(x+1) - P(x) = 8$ for $x\in\mathbb{R}$.
+
+\textbf{Solution:} Notice that 0 is a root of the polynomial $P(x) - P(0)$, thus, by the Factor Theorem there exists a polynomial $Q(x)$ such that $P(x) = xQ(x) + P(0)$.
+Substituting this polynomial into the main equation yields:
 \begin{align*}
-    8 = P(x+1) - P(x) & = (x+1)Q(x + 1) - xQ(x)\\
-            -Q(x) + 8 & = (x+1)(Q(x+1) - Q(x))
+  8 = P(x+1) - P(x) & = (x+1)Q(x + 1) - xQ(x) \\
+          -Q(x) + 8 & = (x+1)(Q(x+1) - Q(x))
 \end{align*}
-Thus, $-1$ is a factor of the polynomial $-Q(x) + 8$, so from the Factor Theorem there exists a polynomial $R(x)$ such that $(x+1)R(x) = - Q(x) + 8$ This gives:
+Thus $-1$ is a factor of the polynomial $-Q(x) + 8$, so from the Factor Theorem there exists a polynomial $R(x)$ such that $(x+1)R(x) = - Q(x) + 8$.
+This gives:
 \begin{align*}
-    8 & = (x+1)(-(x+2)R(x+1) + 8) - x(-(x+1)R(x) + 8) \\
-    -x(x+1)R(x) + 8x + 8 & = -(x+1)(x+2)R(x+1) + 8(x+1) \\
-    -x(x+1)R(x) & = -(x+1)(x+2)R(x+1)
+  8 & = (x+1)(-(x+2)R(x+1) + 8) - x(-(x+1)R(x) + 8) \\
+  \iff -x(x+1)R(x) + 8x + 8 & = -(x+1)(x+2)R(x+1) + 8(x+1) \\
+  \iff -x(x+1)R(x) & = -(x+1)(x+2)R(x+1)
 \end{align*}
 
-Let $T(x) = -x(x+1)R(x)$, we have $T(x) = T(x+1)$ for all $x \in \mathbb{R}$ It can easily be shown by that $T(n) = T(0)$ for all natural $n$. Therefore the polynomial $T(x) - T(0)$ has infinitely many roots and thus $T(x) - T(0) = 0$ $\Rightarrow$ $-x(x+1)R(x) = T(0)$, and $-x(x+1)R(x)$ is only constant if $R(x) = 0$ $\Rightarrow$ $0 = -Q(x) + 8$ $\Rightarrow$ $P(x) = 8x + P(0)$
+Let $T(x) = -x(x+1)R(x)$, we have $T(x) = T(x+1)$ for all $x \in \mathbb{R}$ It can easily be shown by that $T(n) = T(0)$ for all natural $n$.
+Therefore the polynomial $T(x) - T(0)$ has infinitely many roots and thus $T(x) - T(0) = 0$ $\Rightarrow$ $-x(x+1)R(x) = T(0)$, and $-x(x+1)R(x)$ is only constant if $R(x) = 0$ $\Rightarrow$ $0 = -Q(x) + 8$ $\Rightarrow$ $P(x) = 8x + P(0).$
 
-\item %2022, Malwande
+
+\item % 2022, Malwande
 Let $\Gamma$ be the incircle of acute triangle $\triangle ABC$ with tangency points $D$ and $E$ on sides $BC$ and $CA$ respectively.
 Let $X$ be a point on $AC$ such that $BX \parallel DE$.
 Let $Y$ be the point where the angle bisector of $C$ meets $AB$.
 Prove that $XY$ is tangent to $\Gamma$.
 
 \textbf{Solution:}
-Note $CE = CD$ as they are both tangents to $\Gamma$ from $C$, meaning $\triangle CED$ is isosceles and $CY$ is the perpendicular bisector. Since $BX\mathop{||}DE$, we have that $\triangle CXB$ is also isosceles with $CY$ as the perpendicular bisector.
+Note $CE = CD$ as they are both tangents to $\Gamma$ from $C$, meaning $\triangle CED$ is isosceles and $CY$ is the perpendicular bisector. Since $BX \parallel DE$, we have that $\triangle CXB$ is also isosceles with $CY$ as the perpendicular bisector.
 
 Now consider the line $CY$. Note that $E$ is the reflection of $D$ through $CY$, and similarly $X$ is the reflection of $B$ through $CY$. Since $BY$ is tangent to $\Gamma$, the reflection $XY$ is also tangent.
 
@@ -72,9 +78,16 @@ An operation involves choosing a row or column and flipping the colour of every 
 Is it possible that for all $0 \leq k \leq n^2$, you can do some sequence of operations and end up with $k$ black squares?
 
 \textbf{Solution:}
-First note that performing a flip on a row or column twice is the same as having not performed a flip at all. Secondly note that the order of flips do not matter. Let there be $p$ row-flips and $q$ column-flips, with $0\leq p,q\leq n$. The number of values of $k$ we can achieve with a series of operations is less than or equal to the number of ordered pairs $(p,q)$, which we will define as $S_n$. The ordered restriction is due to $(p,q)$ and $(q,p)$ yielding the same number of black squares. If $S_n$ is less than the number of squares on the board, then there will exist some number of $k$ black squares we cannot achieve. Therefore we need that:
+First note that performing a flip on a row or column twice is the same as having not performed a flip at all.
+Secondly note that the order of flips do not matter.
+Let there be $p$ row-flips and $q$ column-flips, with $0\leq p,q\leq n$.
+The number of values of $k$ we can achieve with a series of operations is less than or equal to the number of ordered pairs $(p,q)$, which we will define as $S_n$.
+The ordered restriction is due to $(p,q)$ and $(q,p)$ yielding the same number of black squares.
+If $S_n$ is less than the number of squares on the board, then there will exist some number of $k$ black squares we cannot achieve.
+Therefore we need that:
 $$S_n = \frac{(n+1)(n+2)}{2} \geq n^2 + 1$$
-Which is only true for $n\leq3$. Checking the number of black squares for these cases with all the possible pairs $(p,q)$ shows that only the $n=1$ case is possible.
+which is only true for $n\leq3$.
+Checking the number of black squares for these cases with all the possible pairs $(p,q)$ shows that only the $n=1$ case is possible.
 
 
 \item
