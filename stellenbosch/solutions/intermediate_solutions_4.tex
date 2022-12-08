@@ -40,7 +40,19 @@ Thus there are $3150 -70 -420 -420 = 2240$ ways to allocate the coaches while ke
 
 
 \item
+\textbf{Solution:} Notice that 0 is a root of the polynomial $P(x) - P(0)$, thus, by the Factor Theorem. There exists a polynomial $Q(x)$ such that $P(x) = xQ(x) + P(0)$. Substituting this polynomial into the main equation yields:
+\begin{align*}
+    8 = P(x+1) - P(x) & = (x+1)Q(x + 1) - xQ(x)\\
+            -Q(x) + 8 & = (x+1)(Q(x+1) - Q(x))
+\end{align*}
+Thus, $-1$ is a factor of the polynomial $-Q(x) + 8$, so from the Factor Theorem there exists a polynomial $R(x)$ such that $(x+1)R(x) = - Q(x) + 8$ This gives:
+\begin{align*}
+    8 & = (x+1)(-(x+2)R(x+1) + 8) - x(-(x+1)R(x) + 8) \\
+    -x(x+1)R(x) + 8x + 8 & = -(x+1)(x+2)R(x+1) + 8(x+1) \\
+    -x(x+1)R(x) & = -(x+1)(x+2)R(x+1)
+\end{align*}
 
+Let $T(x) = -x(x+1)R(x)$, we have $T(x) = T(x+1)$ for all $x \in \mathbb{R}$ It can easily be shown by that $T(n) = T(0)$ for all natural $n$. Therefore the polynomial $T(x) - T(0)$ has infinitely many roots and thus $T(x) - T(0) = 0$ $\Rightarrow$ $-x(x+1)R(x) = T(0)$, and $-x(x+1)R(x)$ is only constant if $R(x) = 0$ $\Rightarrow$ $0 = -Q(x) + 8$ $\Rightarrow$ $P(x) = 8x + P(0)$
 
 \item 
 
