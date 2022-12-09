@@ -11,30 +11,30 @@
 \thispagestyle{empty}
 
 \begin{center}
-  \textbf{\Large <LEVEL> Test <NUMBER>}
-  % LEVEL is Senior, Intermediate or Beginner
-  % NUMBER is the test number: 1, 2, etc.
+  \textbf{\Large Advanced Test 5 Solutions}
   \\ \vspace{1em}
   \textbf{\large Stellenbosch Camp 2022}
-  \\ \vspace{1em}
-  \textbf{\large Time: $2\frac{1}{2}$ hours}
 \end{center}
 
 \bigskip
 
-\begin{enumerate}[itemsep=\fill]
+\begin{enumerate}[itemsep=24pt plus 12pt minus 9pt]
 
 \item % Source of problem
 Find all functions $f : \mathbb{R} \to \mathbb{R}$ such that \[ f(x+y) = f(x^2+y^2) \] for all $x,y \in \mathbb{R}$.
 
-\textbf{Solution}:We see that making the substitution $y$ $\rightarrow$ $-x$ yields 
+\textbf{Solution}:
+We see that making the substitution $y \leftarrow -x$ yields 
 \begin{align}
-    f(0)=f(2x^{2})
+  f(0) = f(2x^{2}).
 \end{align}
-Consider any $a \in \mathbb{R}$, substitute $x$ $\rightarrow$ $\sqrt{\frac{a}{2}}$ into (1), this gives $f(0) = f(a)$ $\forall a \in \mathbb{R^{+}}$
-\\Substituting $x$ $\rightarrow$ $-x$ and $y$ $\rightarrow$ $0$ into the original equation gives $f(-x) = f((-x)^{2}) = f(x^{2})$
-\\Finally, substitute $y \rightarrow 0$ gives $f(x) = f(x^{2})$. Thus $f(x)= f(x^{2}) = f(-x)$ $\forall x \in \mathbb{R}$
-\\Therefore $f(x) = f(0) = c$ $\forall x \in \mathbb{R}$ and the check is trivial.
+Consider any $a \in \mathbb{R}^+$, substitute $x$ $\rightarrow$ $\sqrt{\frac{a}{2}}$ into (1), this gives $f(0) = f(a)$ $\forall a \in \mathbb{R^{+}}$.
+
+Substituting $x$ $\rightarrow$ $-x$ and $y$ $\rightarrow$ $0$ into the original equation gives $f(-x) = f((-x)^{2}) = f(x^{2})$.
+
+Finally, substitute $y \rightarrow 0$ gives $f(x) = f(x^{2})$. Thus $f(x)= f(x^{2}) = f(-x)$ $\forall x \in \mathbb{R}$.
+
+Therefore $f(x) = f(0) = c$ $\forall x \in \mathbb{R}$ and the check is trivial.
 
 
 \item %
@@ -45,10 +45,8 @@ The person who places the last X loses.
 Is there a winning strategy for either player?
 
 \textbf{Solution:}
-Dylan has a winning strategy that will absolutely demolish Fionn, leaving the whole nation of Ireland in tears. 
-
+Dylan has a winning strategy that will absolutely demolish Fionn, leaving the whole nation of Ireland in tears.
 Dylan's first move will be to place an $X$ on the square diagonally up-right from the bottom-left most square. As soon as Fionn sees this he will know he is doomed, he should honestly just resign now while he has some dignity remaining.
-
 No matter what move Fionn makes now, Dylan will be able to mirror it on the opposing arm of the resulting L-shape, until a single square remains on Fionn's turn and he is sent back to Ireland as the loser.
 
 The $n=1$ case doesn't count because that's the only case where Dylan loses which is unfair.
@@ -62,17 +60,17 @@ Let $Q \neq B$ be the intersection of the line $BH$ with $\Gamma$.
 Prove that $PQ = BC$.
 
 \textbf{Solution 1:  } Construct the line $k$ parallel to $HC$ through $B$, and the line $\ell$ parallel to $BH$ through $C$. Let $H'$ be the intersection of $k$ and $\ell$. Let the intersection of $AH$ with $BC$ be $D$ and the intersection of $BH$ with $AC$ be $E$. Notice that 
-
 \begin{flalign*}
   \angle BH'C = \angle CH'B =180^\circ - \angle EHC =180^\circ - \angle EDC =180^\circ - \angle CAB
 \end{flalign*}
-Therefore, by the converse of opposite angles of a cyclic quadrilateral, $H', B, A, C$ are concyclic. In other words $H'$ is on the circumcircle of $\triangle ABC$.\\
+Therefore, by the converse of opposite angles of a cyclic quadrilateral, $H', B, A, C$ are concyclic. In other words $H'$ is on the circumcircle of $\triangle ABC$.
 
-Note that in parallelogram $HCH'B$ the diagonals bisect each other,so $M$ is on $H'H$. That is to say $H'$ is on $HM$, but $H'$ is also on the circumcircle so $H'=X$.\\
+Note that in parallelogram $HCH'B$ the diagonals bisect each other,so $M$ is on $H'H$. That is to say $H'$ is on $HM$, but $H'$ is also on the circumcircle so $H'=X$.
 
-Finally, as $XC=H'C || BH$ we have that $BYCX$ is an isosceles trapezium (cyclic + parallel sides), we have that $BC=XY$ as required.   
+Finally, as $XC = H'C \parallel BH$ we have that $BYCX$ is an isosceles trapezium (cyclic + parallel sides), we have that $BC = XY$ as required.   
 
-\textbf{Solution 2:} It is well known that $H$ is the center of the homothety of ratio 2 that sends the nine-point circle to the circumcircle. Therefore $M$ is the midpoint of $HX$, so $XC||BH$ by midpoint theorem. It follows that $BYCX$ is an isosceles trapezium, and thus $BC=XY$.
+\textbf{Solution 2:} It is well known that $H$ is the center of the homothety of ratio 2 that sends the nine-point circle to the circumcircle. Therefore $M$ is the midpoint of $HX$, so $XC \parallel BH$ by midpoint theorem.
+It follows that $BYCX$ is an isosceles trapezium, and thus $BC = XY$.
 
 
 \item % Mario Ynocente Castro, Number Theory Marathon
@@ -82,12 +80,12 @@ Prove that at least one of $a$, $b$, and $c$ is equal to $1$.
 
 \textbf{Solution: } This is secretly an algebra question.
 \begin{align*}
-a^3+b^3+c^3-1 &= (a+b+c-1)(a^2+b^2+c^2-ab-bc-ca)+3abc+a^2+b^2+c^2-ab-bc-ca-1\\
-&\equiv_p 3abc+a^2+b^2+c^2-ab-bc-ca-1\\
-&= (a+b+c-1)(a+b+c)+a+b+c+3abc-3ab-3bc-3ca-1\\
-&\equiv_p 3abc-3ab-3bc-3ca+a+b+c-1\\
-&\equiv_p 3abc-3ab-3bc-3ca+3a+3b+3c-3\\
-&= 3(a-1)(b-1)(c-1)
+  a^3+b^3+c^3-1 &= (a+b+c-1)(a^2+b^2+c^2-ab-bc-ca)+3abc+a^2+b^2+c^2-ab-bc-ca-1\\
+  &\equiv_p 3abc+a^2+b^2+c^2-ab-bc-ca-1\\
+  &= (a+b+c-1)(a+b+c)+a+b+c+3abc-3ab-3bc-3ca-1\\
+  &\equiv_p 3abc-3ab-3bc-3ca+a+b+c-1\\
+  &\equiv_p 3abc-3ab-3bc-3ca+3a+3b+3c-3\\
+  &= 3(a-1)(b-1)(c-1)
 \end{align*}
 If $p=3$, one of $a,b$ and $c$ must be $1$, else W.L.O.G. $p \mid (a-1)$ with $0\leq a-1<p$, which means $a=1$. 
 
@@ -98,29 +96,31 @@ for all real $x$.
 
 \textbf{Solution:}
 For the LHS to equal the RHS, the coefficients of the terms of the polynomial products must all be equal. Assuming $P(x) \neq 0$:
-$$x \cdot a_n 2^nx^n = 8x\cdot a_n x^n$$
-$$\implies n = 3$$
+$$x \cdot a_n 2^nx^n = 8x\cdot a_n x^n \implies n = 3.$$
 The roots of the LHS and RHS are also equal, meaning $8$ and $2$ are roots of $P(x)$.
-$$(x-8)c(2x-r_1)(2x-2)(2x-8) = 8(x-1)c(x-r_1)(x-2)(x-8)$$
-$$\hspace{3mm}(2x-r_1)(x-4) = 2(x-r_1)(x-2)$$
-$$\implies r_1 = 4\hspace{100mm}$$
-$$\implies P(x) = c(x-8)(x-4)(x-2) \hspace{45mm} \forall c\in\mathbb{R}\hspace{8mm}$$
+\begin{align*}
+  (x-8)c(2x-r_1)(2x-2)(2x-8) &= 8(x-1)c(x-r_1)(x-2)(x-8) \\
+  \implies (2x-r_1)(x-4) &= 2(x-r_1)(x-2) \\
+  \implies r_1 &= 4 \\
+  \implies P(x) &= c(x-8)(x-4)(x-2) \qquad \forall c\in\mathbb{R}.
+\end{align*}
 The check is trivial.
+
 
 \item % Russian MO, 2015, 10.6
 A square is dissected into $n^2$ rectangles, where $n\geq 2$, by $n-1$ horizontal lines and $n-1$ vertical lines. Prove that one may choose $2n$ of these rectangles such that for any two of the chosen rectangles, one can be put completely into the other (perhaps, after some rotation).
 
-\textbf{Solution:} We can shuffle rows and columns, so assume W.L.O.G. that $a_1\geq ... \geq a_n$ are the lengths of the rectangles' horizontal sides (from the left to the right), and $b_1\geq ...\geq b_n$ are the lengths of their vertical sides (from the top to the bottom). Let $Q_{i,j}$ be the $a_i\times b_j$ rectangle. Since $a_1+...+a_n=b_1+...+b_n$, we cannot have $a_i<b_i$ for all $i$, or $b_i<a_i$ for all $i$. Thus we have some $k$ such that $a_k\leq b_k$ and some $j$ such that $a_j\geq b_j$, and we also have that for every $i$, one of these is true. This means that we can find an index $k$ such that $a_k\leq b_k$ and $a_{k-1}\geq b_{k-1}$ (or vice versa, but we consider this case without losing generality). Then the required chain of rectangles is $Q_{1,1},Q_{1,2}...Q_{1,k-1},Q_{2,k-1},...,Q_{k,k-1},Q_{k-1,k},Q_{k,k},...,Q_{k,n},Q_{k+1,n},...,Q_{n,n}$. It is clear that all $Q_{i,j}$ can be contained in $Q_{i,j+1}$ and also in $Q_{i+1,j}$. And of course, our case gives that $Q_{k,k-1}$ can be contained in $Q_{k-1,k}$.
+\textbf{Solution:}
+We can shuffle rows and columns, so assume W.L.O.G. that $a_1\geq ... \geq a_n$ are the lengths of the rectangles' horizontal sides (from the left to the right), and $b_1\geq ...\geq b_n$ are the lengths of their vertical sides (from the top to the bottom).
+Let $Q_{i,j}$ be the $a_i\times b_j$ rectangle.
+Since $a_1+...+a_n=b_1+...+b_n$, we cannot have $a_i<b_i$ for all $i$, or $b_i<a_i$ for all $i$.
+Thus we have some $k$ such that $a_k\leq b_k$ and some $j$ such that $a_j\geq b_j$, and we also have that for every $i$, one of these is true.
+This means that we can find an index $k$ such that $a_k\leq b_k$ and $a_{k-1}\geq b_{k-1}$ (or vice versa, but we consider this case without losing generality).
+Then the required chain of rectangles is $Q_{1,1},Q_{1,2}...Q_{1,k-1},Q_{2,k-1},...,Q_{k,k-1},Q_{k-1,k},Q_{k,k},...,Q_{k,n},Q_{k+1,n},...,Q_{n,n}$.
+It is clear that all $Q_{i,j}$ can be contained in $Q_{i,j+1}$ and also in $Q_{i+1,j}$.
+And of course, our case gives that $Q_{k,k-1}$ can be contained in $Q_{k-1,k}$.
 
 
 \end{enumerate}
-
-
-% ASCII art
-\centering
-\small
-\begin{BVerbatim}
-% Insert art here
-\end{BVerbatim}
 
 \end{document}

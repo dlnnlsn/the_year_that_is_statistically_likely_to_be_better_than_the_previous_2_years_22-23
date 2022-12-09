@@ -41,8 +41,8 @@ $$ (x+y+z)\left(\frac{1}{x}+\frac{1}{y}+\frac{1}{z}\right) \geq 9. $$
 Using AM-GM we have:
 $$x+y+z \geq 3\sqrt[3]{xyz}$$
 $$\frac{1}{x}+\frac{1}{y}+\frac{1}{z} \geq 3\sqrt[3]{\frac{1}{xyz}}$$
-Multiplying together proves our inequality.
-$$(x+y+z)(\frac{1}{x}+\frac{1}{y}+\frac{1}{z}) \geq 3\sqrt[3]{xyz}\cdot 3\sqrt[3]{\frac{1}{xyz}} = 9$$
+Multiplying together proves our inequality:
+$$(x+y+z)\left(\frac{1}{x}+\frac{1}{y}+\frac{1}{z}\right) \geq 3\sqrt[3]{xyz}\cdot 3\sqrt[3]{\frac{1}{xyz}} = 9.$$
 
 \item
 The center of the circumcircle of the acute triangle $ABC$ is $O$, and the circumcircle of $ABO$ meets $BC$ and $AC$ at $P$ and $Q$ ($P\neq B$).
@@ -50,8 +50,10 @@ Show that the extension of the line $CO$ is perpendicular to $PQ$.
 
 \textbf{Solution}:
 The points $A$, $Q$, $B$, $P$ are concyclic which implies that $\angle{QPC} = \angle{CAB}$ and since $\triangle{ABC}$ and $\triangle{PQC}$ both have $\angle{C}$ in common $\Rightarrow$ $\angle{ABC}=\angle{PQC}$.
-\\$\angle{AOC} = 2\angle{ABC}$ (angle at center = double angle at circumference), $AO = OC$ $\Rightarrow$ $\angle{OAC} = 90 - \angle{ABC} = \angle{OCA}$. Let $CO$ intersect $PQ$ at $X$
-\\Therefore $90 = \angle{PQC} + \angle{OCA} = \angle{XQC} + \angle{QCX}$ implying that $\angle{CXQ}$ must be 90.
+
+$\angle{AOC} = 2\angle{ABC}$ (angle at center = double angle at circumference), $AO = OC$ $\Rightarrow$ $\angle{OAC} = 90 - \angle{ABC} = \angle{OCA}$. Let $CO$ intersect $PQ$ at $X$
+
+Therefore $90 = \angle{PQC} + \angle{OCA} = \angle{XQC} + \angle{QCX}$ implying that $\angle{CXQ}$ must be 90.
 
 \item
 Find all functions $f : \mathbb{R} \to \mathbb{R}$ such that \[ f(x+y) = f(x^2+y^2) \] for all $x,y \in \mathbb{R}$.
@@ -60,10 +62,13 @@ Find all functions $f : \mathbb{R} \to \mathbb{R}$ such that \[ f(x+y) = f(x^2+y
 \begin{align}
     f(0)=f(2x^{2})
 \end{align}
-Consider any $a \in \mathbb{R}$, substitute $x$ $\rightarrow$ $\sqrt{\frac{a}{2}}$ into (1), this gives $f(0) = f(a)$ $\forall a \in \mathbb{R^{+}}$
-\\Substituting $x$ $\rightarrow$ $-x$ and $y$ $\rightarrow$ $0$ into the original equation gives $f(-x) = f((-x)^{2}) = f(x^{2})$
-\\Finally, substitute $y \rightarrow 0$ gives $f(x) = f(x^{2})$. Thus $f(x)= f(x^{2}) = f(-x)$ $\forall x \in \mathbb{R}$
-\\Therefore $f(x) = f(0) = c$ $\forall x \in \mathbb{R}$ and the check is trivial.
+Consider any $a \in \mathbb{R}$, substitute $x$ $\rightarrow$ $\sqrt{\frac{a}{2}}$ into (1), this gives $f(0) = f(a) \ \forall a \in \mathbb{R^{+}}$.
+
+Substituting $x \leftarrow -x$ and $y \leftarrow 0$ into the original equation gives $f(-x) = f((-x)^{2}) = f(x^{2})$.
+
+Finally, substitute $y \leftarrow 0$ gives $f(x) = f(x^{2})$. Thus $f(x)= f(x^{2}) = f(-x) \ \forall x \in \mathbb{R}$.
+
+Therefore $f(x) = f(0) = c \ \forall x \in \mathbb{R}$ and the check is trivial.
 
 \item % Tsimelman
 The game of Chomp is played on an $n \times n$ board by Dylan (on behalf of SA) and Fionn (on behalf of Ireland) as follows: Dylan moves first.
