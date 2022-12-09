@@ -24,11 +24,33 @@
 
 \begin{enumerate}[itemsep=\fill]
 
-\item % Source of problem
-Problem statement
+\item
+Find all functions $f : \mathbb{R} \to \mathbb{R}$ such that \[ f(x+y) = f(x^2+y^2) \] for all $x,y \in \mathbb{R}$.
 
+\textbf{Solution}:We see that making the substitution $y$ $\rightarrow$ $-x$ yields 
+\begin{align}
+    f(0)=f(2x^{2})
+\end{align}
+Consider any $a \in \mathbb{R}$, substitute $x$ $\rightarrow$ $\sqrt{\frac{a}{2}}$ into (1), this gives $f(0) = f(a)$ $\forall a \in \mathbb{R^{+}}$
+\\Substituting $x$ $\rightarrow$ $-x$ and $y$ $\rightarrow$ $0$ into the original equation gives $f(-x) = f((-x)^{2}) = f(x^{2})$
+\\Finally, substitute $y \rightarrow 0$ gives $f(x) = f(x^{2})$. Thus $f(x)= f(x^{2}) = f(-x)$ $\forall x \in \mathbb{R}$
+\\Therefore $f(x) = f(0) = c$ $\forall x \in \mathbb{R}$ and the check is trivial.
 
-\item %
+\item % Tsimelman
+The game of Chomp is played on an $n \times n$ board by Dylan (on behalf of SA) and Fionn (on behalf of Ireland) as follows: Dylan moves first.
+On a player's move, they must place an X on any square $(i, j)$ which does not yet have an X on it, and they must also fill in an X on any square above and to the right of that square which does not yet have an X on it.
+That is, any square $(s, t)$ with $s \geq i$ and $t \geq j$ which does not yet have an X also gets an X filled in.
+The person who places the last X loses.
+Is there a winning strategy for either player?
+
+\textbf{Solution:}
+Dylan has a winning strategy that will absolutely demolish Fionn, leaving the whole nation of Ireland in tears. 
+
+Dylan's first move will be to place an $X$ on the square diagonally up-right from the bottom-left most square. As soon as Fionn sees this he will know he is doomed, he should honestly just resign now while he has some dignity remaining.
+
+No matter what move Fionn makes now, Dylan will be able to mirror it on the opposing arm of the resulting L-shape, until a single square remains on Fionn's turn and he is sent back to Ireland as the loser.
+
+The $n=1$ case doesn't count because that's the only case where Dylan loses which is unfair.
 
 
 \item % 
