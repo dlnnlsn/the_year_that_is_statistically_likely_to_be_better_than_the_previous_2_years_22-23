@@ -21,7 +21,10 @@
 
 \begin{enumerate}[itemsep=24pt]
 
-\item
+\item % Tsimelman
+Two baseball teams are playing each other in a best of 7 match, with each game having a definite winner (no draws). The teams are equally matched so that each game has an equal probability of either team winning. Another game will not be played once any team has won 4 out of the 7 games. Prove that the probability that the game will end in 6 games is the same as the probability that the game will end in 7 games.
+
+\textbf{Solution:} Consider $P_{i,j}$ to be the probability to be in a position where Team A has won $i$ games and Team B has won $j$. Note that if the match continues to 6 games, it must have been in a state of $2-3$ or $3-2$ since if either team had 4 wins, the match would be over. Now $P_{2,4} = 0.5P_{2,3}$, $P_{3,3} = 0.5P_{2,3}+0.5P_{3,2}$ and $P_{4,2} = 0.5P_{3,2}$. If the match continues, it will end in the next round. The probability of continuing to the 7th round is $P_{3,3}$. But $P_{3,3}=P_{2,4}+P_{4,2}$, the probability of ending in the 6th round.
 
 
 \item % The Internet
