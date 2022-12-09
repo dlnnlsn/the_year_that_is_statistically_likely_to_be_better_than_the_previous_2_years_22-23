@@ -54,7 +54,25 @@ No matter what move Fionn makes now, Dylan will be able to mirror it on the oppo
 The $n=1$ case doesn't count because that's the only case where Dylan loses which is unfair.
 
 
-\item % 
+\item % Cono Sur Olympiad 1998
+An acute triangle $\triangle ABC$ has circumcircle $\Gamma$ and orthocenter $H$.
+$M$ is the midpoint of the segment $BC$.
+Let $P$ be the point of the intersection of the line $HM$ with the minor arc $BC$ of $\Gamma$.
+Let $Q \neq B$ be the intersection of the line $BH$ with $\Gamma$.
+Prove that $PQ = BC$.
+
+\textbf{Solution 1:  } Construct the line $k$ parallel to $HC$ through $B$, and the line $\ell$ parallel to $BH$ through $C$. Let $H'$ be the intersection of $k$ and $\ell$. Let the intersection of $AH$ with $BC$ be $D$ and the intersection of $BH$ with $AC$ be $E$. Notice that 
+
+\begin{flalign*}
+  \angle BH'C = \angle CH'B =180^\circ - \angle EHC =180^\circ - \angle EDC =180^\circ - \angle CAB
+\end{flalign*}
+Therefore, by the converse of opposite angles of a cyclic quadrilateral, $H', B, A, C$ are concyclic. In other words $H'$ is on the circumcircle of $\triangle ABC$.\\
+
+Note that in parallelogram $HCH'B$ the diagonals bisect each other,so $M$ is on $H'H$. That is to say $H'$ is on $HM$, but $H'$ is also on the circumcircle so $H'=X$.\\
+
+Finally, as $XC=H'C || BH$ we have that $BYCX$ is an isosceles trapezium (cyclic + parallel sides), we have that $BC=XY$ as required.   
+
+\textbf{Solution 2:} It is well known that $H$ is the center of the homothety of ratio 2 that sends the nine-point circle to the circumcircle. Therefore $M$ is the midpoint of $HX$, so $XC||BH$ by midpoint theorem. It follows that $BYCX$ is an isosceles trapezium, and thus $BC=XY$.
 
 
 \item % Mario Ynocente Castro, Number Theory Marathon
