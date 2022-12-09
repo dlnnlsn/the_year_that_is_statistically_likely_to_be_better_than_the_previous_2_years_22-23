@@ -35,7 +35,16 @@
 
 
 \item
+Find all functions $f : \mathbb{R} \to \mathbb{R}$ such that \[ f(x+y) = f(x^2+y^2) \] for all $x,y \in \mathbb{R}$.
 
+\textbf{Solution}:We see that making the substitution $y$ $\rightarrow$ $-x$ yields 
+\begin{align}
+    f(0)=f(2x^{2})
+\end{align}
+Consider any $a \in \mathbb{R}$, substitute $x$ $\rightarrow$ $\sqrt{\frac{a}{2}}$ into (1), this gives $f(0) = f(a)$ $\forall a \in \mathbb{R^{+}}$
+\\Substituting $x$ $\rightarrow$ $-x$ and $y$ $\rightarrow$ $0$ into the original equation gives $f(-x) = f((-x)^{2}) = f(x^{2})$
+\\Finally, substitute $y \rightarrow 0$ gives $f(x) = f(x^{2})$. Thus $f(x)= f(x^{2}) = f(-x)$ $\forall x \in \mathbb{R}$
+\\Therefore $f(x) = f(0) = c$ $\forall x \in \mathbb{R}$ and the check is trivial.
 
 \end{enumerate}
 
