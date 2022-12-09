@@ -57,7 +57,21 @@ The $n=1$ case doesn't count because that's the only case where Dylan loses whic
 \item % 
 
 
-\item % 
+\item % Mario Ynocente Castro, Number Theory Marathon
+Let $p$ be a prime and $a$, $b$, and $c$ be positive integers such that
+\[ p = a+b+c-1 \quad \text{and} \quad p \mid a^3+b^3+c^3-1. \]
+Prove that at least one of $a$, $b$, and $c$ is equal to $1$.
+
+\textbf{Solution: } This is secretly an algebra question.
+\begin{align*}
+a^3+b^3+c^3-1 &= (a+b+c-1)(a^2+b^2+c^2-ab-bc-ca)+3abc+a^2+b^2+c^2-ab-bc-ca-1\\
+&\equiv_p 3abc+a^2+b^2+c^2-ab-bc-ca-1\\
+&= (a+b+c-1)(a+b+c)+a+b+c+3abc-3ab-3bc-3ca-1\\
+&\equiv_p 3abc-3ab-3bc-3ca+a+b+c-1\\
+&\equiv_p 3abc-3ab-3bc-3ca+3a+3b+3c-3\\
+&= 3(a-1)(b-1)(c-1)
+\end{align*}
+If $p=3$, one of $a,b$ and $c$ must be $1$, else W.L.O.G. $p \mid (a-1)$ with $0\leq a-1<p$, which means $a=1$. 
 
 
 \item % 
