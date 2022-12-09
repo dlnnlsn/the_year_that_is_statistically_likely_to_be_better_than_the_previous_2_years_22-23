@@ -21,15 +21,28 @@
 
 \begin{enumerate}[itemsep=24pt]
 
-\item
+\item % Tsimelman
+Two baseball teams are playing each other in a best of 7 match, with each game having a definite winner (no draws). The teams are equally matched so that each game has an equal probability of either team winning. Another game will not be played once any team has won 4 out of the 7 games. Prove that the probability that the game will end in 6 games is the same as the probability that the game will end in 7 games.
+
+\textbf{Solution:} Consider $P_{i,j}$ to be the probability to be in a position where Team A has won $i$ games and Team B has won $j$. Note that if the match continues to 6 games, it must have been in a state of $2-3$ or $3-2$ since if either team had 4 wins, the match would be over. Now $P_{2,4} = 0.5P_{2,3}$, $P_{3,3} = 0.5P_{2,3}+0.5P_{3,2}$ and $P_{4,2} = 0.5P_{3,2}$. If the match continues, it will end in the next round. The probability of continuing to the 7th round is $P_{3,3}$. But $P_{3,3}=P_{2,4}+P_{4,2}$, the probability of ending in the 6th round.
 
 
-\item
+\item % The Internet
+Let $n$ be a positive integer. There are $n$ points in the plane such that any three of them form a triangle of area $1$. Prove that all the points lie inside a triangle of area $4$. 
 
+\textbf{Solution:}
+Let $\triangle ABC$ be a triangle on the plane. Let $\ell_A$ be the line parallel to $BC$ through $A$. similarly define $\ell_B$ and $\ell_C$. Note that for any other point $D$ to form a triangle of area $1$ with any of the two points from $\triangle ABC$, it has to be on the intersection of two of the lines $\ell_A, \ell_B, \ell_C$. These parallel lines trivially form a triangle of area $4$, and will contain all $n$ points.
 
-\item 
+\item % Kgaugelo
+Let $x$, $y$ and $z$ be positive real numbers. Show that 
+$$ (x+y+z)\left(\frac{1}{x}+\frac{1}{y}+\frac{1}{z}\right) \geq 9. $$
 
-
+\textbf{Solution:} 
+Using AM-GM we have:
+$$x+y+z \geq 3\sqrt[3]{xyz}$$
+$$\frac{1}{x}+\frac{1}{y}+\frac{1}{z} \geq 3\sqrt[3]{\frac{1}{xyz}}$$
+Multiplying together proves our inequality.
+$$(x+y+z)(\frac{1}{x}+\frac{1}{y}+\frac{1}{z}) \geq 3\sqrt[3]{xyz}\cdot 3\sqrt[3]{\frac{1}{xyz}} = 9$$
 
 \item 
 
@@ -45,6 +58,23 @@ Consider any $a \in \mathbb{R}$, substitute $x$ $\rightarrow$ $\sqrt{\frac{a}{2}
 \\Substituting $x$ $\rightarrow$ $-x$ and $y$ $\rightarrow$ $0$ into the original equation gives $f(-x) = f((-x)^{2}) = f(x^{2})$
 \\Finally, substitute $y \rightarrow 0$ gives $f(x) = f(x^{2})$. Thus $f(x)= f(x^{2}) = f(-x)$ $\forall x \in \mathbb{R}$
 \\Therefore $f(x) = f(0) = c$ $\forall x \in \mathbb{R}$ and the check is trivial.
+
+\item % Tsimelman
+The game of Chomp is played on an $n \times n$ board by Dylan (on behalf of SA) and Fionn (on behalf of Ireland) as follows: Dylan moves first.
+On a player's move, they must place an X on any square $(i, j)$ which does not yet have an X on it, and they must also fill in an X on any square above and to the right of that square which does not yet have an X on it.
+That is, any square $(s, t)$ with $s \geq i$ and $t \geq j$ which does not yet have an X also gets an X filled in.
+The person who places the last X loses.
+Is there a winning strategy for either player?
+
+\textbf{Solution:}
+Dylan has a winning strategy that will absolutely demolish Fionn, leaving the whole nation of Ireland in tears. 
+
+Dylan's first move will be to place an $X$ on the square diagonally up-right from the bottom-left most square. As soon as Fionn sees this he will know he is doomed, he should honestly just resign now while he has some dignity remaining.
+
+No matter what move Fionn makes now, Dylan will be able to mirror it on the opposing arm of the resulting L-shape, until a single square remains on Fionn's turn and he is sent back to Ireland as the loser.
+
+The $n=1$ case doesn't count because that's the only case where Dylan loses which is unfair.
+
 
 \end{enumerate}
 
