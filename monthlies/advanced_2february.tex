@@ -1,0 +1,86 @@
+\documentclass{article}
+
+\usepackage{mathtools,amsfonts}
+\usepackage{enumitem}
+\usepackage{fullpage}
+\usepackage{fancyvrb}
+\usepackage{hyperref}
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\newcommand*{\floor}[1]{\left\lfloor#1\right\rfloor}
+
+
+\begin{document}
+\thispagestyle{empty}
+
+\begin{center}
+  \textbf{\Large February Advanced Monthly Problem Set}
+  \\ \vspace{1em}
+  \textbf{\large Due: 13 March 2023}
+\end{center}
+
+\bigskip
+
+\begin{enumerate}[itemsep=\fill]
+
+\item % DB-2017-1
+Let $ABC$ be a triangle with circumcentre $O$ and circumradius $R$ such that $\angle A = 45^\circ$.
+Let $BO$ (extended) meet $AC$ at $E$ and let $CO$ (extended) meet $BC$ at $F$.
+Find $BE \cdot CF$ in terms of $R$.
+
+ 
+\item % Tim
+Let $m$ and $n$ be positive integers.
+Show that the complete bipartite graph $K_{m,n}$ has the same number of edges as its complement if and only if $m$ and $n$ are consecutive triangular numbers.\footnote{The definitions of the \href{https://en.wikipedia.org/wiki/Complete_bipartite_graph}{complete bipartite graph} and the \href{https://en.wikipedia.org/wiki/Complement_graph}{complement of a graph} can be found on Wikipedia.}
+
+
+\item % Malwande?
+Find all positive integers $n$ such that $\displaystyle \floor{\frac{n}{2}} \cdot \floor{\frac{n}{3}} \cdot \floor{\frac{n}{4}} = n^2$, where $\floor{x}$ denotes the greatest integer not greater than $x$.
+
+
+\item % Iran
+Let $\Gamma_1$ be a circle with a point $O$ on it.
+Let $\Gamma_2$ be a circle centred at $O$ and let $P$ and $Q$ be the intersection points of $\Gamma_1$ and $\Gamma_2$.
+Let $\Gamma_3$ be a circle which is externally tangent to $\Gamma_2$ at a point $R$ and internally tangent to $\Gamma_1$ at a point $S$.
+Suppose that $Q$, $R$, and $S$ are collinear.
+Let $A$ and $B$ be the other intersection points of $PR$ and $OR$ with $\Gamma_1$.
+Prove that $QA$ is parallel to $SB$.
+
+
+\item % Israel training problems 5771, 2018
+Let $m$ and $n$ be positive integers such that $\displaystyle \frac{m}{n} < \sqrt{23}$.
+Show that $\displaystyle \frac{m}{n} +\frac{3}{mn} < \sqrt{23}$.
+
+
+\item % Malwande?
+Find all functions $f : \mathbb{Q} \times \mathbb{Q} \to \mathbb{Q}$ such that for all $x, y, z \in \mathbb{Q}$ we have
+\[ f(x,y) +f(y,z) +f(z,x) = f(0,x+y+z). \]
+
+
+\item % Israel training problems 5772, 2018
+There are $2023$ students in a school.
+A group of students is called \emph{friendly} if each pair of students in it are friends.
+There is at least one friendly group of $1012$ students at the school, but there is no friendly group of $1013$ students.
+Prove that there is at least one student such that every friendly group of $1012$ students contains this student.
+
+
+\item % Israel training problems 5772, 2018
+Consider vectors $(m,n,p)$ in 3D space with integer coordinates.
+We say that two vectors point in the same direction if each one is a multiple of the other, and we call a vector \emph{primitive} if it has the shortest length among vectors pointing in its direction.
+Let $P$ be a primitive vector and consider the collection $\mathcal{D}$ of vectors with integer coordinates which are orthogonal to $P$.
+Consider pairs of vectors in $\mathcal{D}$ which do not point in the same direction, and the parallelograms created by such pairs.
+Prove that the smallest possible area of such a parallelogram is equal to the length of $P$.
+
+\end{enumerate}
+
+
+\vfill
+\small
+\begin{itemize}
+	\item Submit your solutions at \href{https://forms.gle/9EBuvypU7ppDmprt8}{https://forms.gle/9EBuvypU7ppDmprt8}.
+	\item Submit each question in a single separate PDF file (with multiple pages if necessary).
+	\item If you take photographs of your work, use a document scanner such as Office Lens to convert to PDF.
+	\item If you have multiple PDF files for a question, combine them using software such as PDFsam.
+\end{itemize}
+
+\end{document}
