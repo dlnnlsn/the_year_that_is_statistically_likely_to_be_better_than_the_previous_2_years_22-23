@@ -1,0 +1,64 @@
+\documentclass{article}
+
+\usepackage{mathtools,amsfonts}
+\usepackage{enumitem}
+\usepackage{fullpage}
+\usepackage{fancyvrb}
+\usepackage{hyperref}
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\newcommand*{\floor}[1]{\left\lfloor#1\right\rfloor}
+
+
+\begin{document}
+\thispagestyle{empty}
+
+\begin{center}
+  \textbf{\Large March Intermediate Monthly Solutions 2023}
+  \\ \vspace{1em}
+\end{center}
+
+\bigskip
+
+\begin{enumerate}
+\item Suppose that such an enumeration is possible, and let the common edge sum equal $S$. Note that every edge is part of three different triangles, and that there are ${5 \choose 3} = 10$ different triangles. Hence the sum of the numbers on the edges of each triangle must equal $10S$, but every number from 1 to 10 is counted thrice, so we have 
+$$10S = 3(1+2+\dots+10) = 3(55) = 165,$$
+which gives $S = 16.5$. Since $S$ must be an integer, this is a contradiction. Hence such an enumeration is not possible. 
+
+\item Note that $a^2 \equiv_4 1$ if $a$ is odd, and $a^2 \equiv_3 1$ if $a$ is not divisible by 3. 
+
+Firstly, if any $a_i$ is even, then $a_i^2$ is divisible by 4. If all the $a_i$ are odd, then $a_1^2 + a_2^2 + \dots +a_{12}^2 \equiv_4 1 + 1 + \dots + 1 \equiv_4 0$, so the given product is divisible by 4 in both cases. 
+
+Next, if any $a_i$ is divisible by 3, then so is the given product. If no $a_i$ is divisible by 3, then $a_1^2+\dots+a_{12}^2 \equiv_{3} 1+1+\dots+1 \equiv_3 0$, so the given product is divisible by 3 in both cases.
+
+Finally, since $3$ and $4$ are relatively prime, the given product is divisible by $3\times 4 = 12$. 
+
+\item Suppose this is possible, and let $\ell$ be the line containing the 5 midpoints of the sides, and suppose WLOG that $\ell$ is horizontal. Note that the vertices of a particular edge must be equidistant from $\ell$, since $\ell$ contains its midpoint. This holds for all 5 of the edges, so all 6 vertices of the hexagon are equidistant from $\ell$, lying alternately above and below $\ell$. In particular, this implies that the midpoint of the sixth edge also lies on $\ell$.
+
+Now consider the leftmost vertex above $\ell$ and the leftmost vertex below $\ell$. Every edge of the hexagon intersects $\ell$; the vertex above $\ell$ must thus connect to two vertices below $\ell$ and the vertex below $\ell$ must connect to two vertices above $\ell$. This leads to at least three edges, two of which must intersect, as in the diagram. 
+
+\item Construct a \emph{cycle} of houses as follows: pick any house as the first house and suppose that, inductively, the $n^{\textrm{th}}$ house has been chosen. Let house $n+1$ be the house which is occupied by the dwarf which occupied the $n^{\textrm{th}}$ house last summer. At some point this sequence must start repeating to form a cycle. If not all the houses have been used up, pick a random house, and construct a new cycle using the above process. 
+
+In this way, all the houses are divided up into several cycles. We now colour the cycles as follows: colour the first house in each cycle green, and colour the remaining houses in each cycle alternately red and white. 
+
+Thus, any dwarf who lived in a green house last summer would be in a red or white house this summer. Similarly, dwarfs who lived in a white house, will move to a red or green house, and dwarfs who lived in a red house will move to a white or green house. 
+
+\item Suppose \wlg\ that the equilateral triangle has side length 1. Note that since the line segments $OA$, $OB$ and $OC$ lie entirely inside the triangle $ABC$, each one of these lengths are less than 1. Also, using the triangle inequality in triangle $AOB$ we get 
+$$AO+BO > AB = 1 > CO$$
+Similarly, $BO + CO > AO$ and $AO+CO > BO$. Hence the segments $AO$, $BO$ and $CO$ satisfy all three triangle inequalities, which implies that they form a triangle. 
+
+\item For the first inequality, note that 
+$$\frac{a}{a+b} + \frac{b}{b+c} + \frac{c}{c+a} > \frac{a}{a+b+c} + \frac{b}{a+b+c}+\frac{c}{a+b+c}=1.$$
+
+For the second inequality, note that 
+\begin{eqnarray*}
+\frac{a}{a+b} + \frac{b}{b+c} + \frac{c}{c+a} &=& 1-\frac{b}{a+b} + 1-\frac{c}{b+c} + 1-\frac{a}{c+a} \\
+&=& 3-\left(\frac{b}{a+b} + \frac{c}{b+c} + \frac{a}{c+a}\right).
+\end{eqnarray*}
+We obtain 
+$$\frac{b}{a+b} + \frac{c}{b+c} + \frac{a}{c+a} > 1$$ in a similar fashion to the first inequality, and so 
+$$3-\left(\frac{b}{a+b} + \frac{c}{b+c} + \frac{a}{c+a}\right) < 3-1 = 2.$$
+
+\end{enumerate}
+
+\end{document}
