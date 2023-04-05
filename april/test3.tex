@@ -1,0 +1,98 @@
+\documentclass{article}
+
+\usepackage{mathtools,amsfonts}
+\usepackage{enumitem}
+% \usepackage{fullpage}
+\usepackage{fancyvrb}
+\usepackage{hyperref}
+
+
+\begin{document}
+\thispagestyle{empty}
+
+\begin{center}
+  \textbf{\Large Test 3}
+  \\ \vspace{1em}
+  \textbf{\large April Camp 2023}
+  \\ \vspace{1em}
+  \textbf{\large Time: $4\frac{1}{2}$ hours}
+\end{center}
+
+\bigskip
+% \vfill
+
+\begin{enumerate}[itemsep=\fill]
+
+\item % 
+A convex quadrilateral $ABCD$ where $\angle DAB +\angle ABC < 180^\circ$ is given on a plane.
+Let $E$ be a point different from the vertices of te quadrilateral on the line segment $AB$ such that the circumcircles of triangles $AED$ and $BEC$ intersect inside teh quadrilateral $ABCD$ at point $F$.
+Point $G$ is defined so that $\angle DCG = \angle DAB$, $\angle CDG = \angle ABC$, and triangle $CDG$ is located outside quadrilateral $ABCD$.
+Prove that the points $E$, $F$, and $G$ are collinear.
+
+
+\item % PAMOSL C1 2022
+During a mathematical contest, $n$ contestants (where $n \geq 3$) wrote a paper containing $14$ multiple choice problems.
+Suppose that:
+\begin{enumerate}[label=(\roman*)]
+  \item for each problem, there is at least one contestant who solved it,
+  \item for every three contestants, there is at least one problem which they all have solved, and
+  \item no problem was solved by more than half of the contestants.
+\end{enumerate}
+Find the smallest value of $n$.
+
+
+\item % IMOSL A1 2022
+Let $(a_n)_{n \geq 1}$ be a sequence of positive real numbers with the property that
+\[ a_{n+1}^2 +a_n a_{n+2} \leq a_n +a_{n+2} \]
+for all positive integers $n$.
+Show that $a_{2022} \leq 1$.
+
+
+\item % IMOSL N5 2022
+For each positive integer $i \leq 9$ and $T$, define $d_i(T)$ to be the total number of times the digit $i$ appears when all multiples of $1829$ between $1$ and $T$ inclusive are written out in base $10$.
+
+Show that there are infinitely many positive integers $T$ such that there are precisely two distinct values among $d_1(T), d_2(T), \dotsc, d_9(T)$.
+
+\end{enumerate}
+
+
+\vfill
+% ASCII art
+\centering
+\fontsize{3pt}{2.75pt}
+\begin{BVerbatim}
+ _   ___   ___   ___   ___   ___   ___   ___   ___   ___   ___
+ _| |_  |_|  _| |_  |_|  _| |_  |_|  _| |_  |_|  _| |_  |_|  _|
+|  _  |  _  |_   _|  _  |  _  |  _  |_   _|  _  |  _  |  _  |_
+|_| |_| | |___| |___| | |_| |_| | |___| |___| | |_| |_| | |___|
+ _   _  |  ___   ___  |  _   _  |_   _____   _|  _   _  |  ___
+| |_| | |_|  _| |_  |_| | |_| |  _| |_   _| |_  | |_| | |_|  _|
+|_   _|  _  |_   _|  _  |_   _| |  _  | |  _  | |_   _|  _  |_
+ _| |___| |___| |___| |___| |_  |_| |_| |_| |_|  _| |___| |___|
+|  ___   ___   _   ___   ___  |  _   _   _   _  |_   ___   ___
+|_|  _| |_  |_| |_|  _| |_  |_| | |_| | | |_| |  _| |_  |_|  _|
+ _  |_   _|  _   _  |_   _|  _  |_   _| |_   _| |  _  |  _  |_
+| |___| |___| | | |___| |___| |  _| |_____| |_  |_| |_| | |___|
+|_   _____   _| |_   _____   _| |  ___   ___  |  _   _  |  ___
+ _| |_   _| |_   _| |_   _| |_  |_|  _| |_  |_| | |_| | |_|  _|
+|  _  | |  _  | |  _  | |  _  |  _  |_   _|  _  |_   _|  _  |_
+|_| |_| |_| |_| |_| |_| |_| |_| | |___| |___| |___| |___| |___|
+ _   _   _   _   _   _   _   _  |  ___   ___   ___   ___   ___
+| |_| | | |_| | | |_| | | |_| | |_|  _| |_  |_|  _| |_  |_|  _|
+|_   _| |_   _| |_   _| |_   _|  _  |_   _|  _  |  _  |  _  |_
+ _| |_____| |_   _| |_____| |_  | |___| |___| | |_| |_| | |___|
+|  ___   ___  | |  ___   ___  | |_   _____   _|  _   _  |  ___
+|_|  _| |_  |_| |_|  _| |_  |_|  _| |_   _| |_  | |_| | |_|  _|
+ _  |_   _|  _   _  |_   _|  _  |  _  | |  _  | |_   _|  _  |_
+| |___| |___| |_| |___| |___| | |_| |_| |_| |_|  _| |___| |___|
+|_   ___   ___   ___   ___   _|  _   _   _   _  |_   ___   ___
+ _| |_  |_|  _| |_  |_|  _| |_  | |_| | | |_| |  _| |_  |_|  _|
+|  _  |  _  |_   _|  _  |  _  | |_   _| |_   _| |  _  |  _  |_
+|_| |_| | |___| |___| | |_| |_|  _| |_____| |_  |_| |_| | |___|
+ _   _  |  ___   ___  |  _   _  |  ___   ___  |  _   _  |  ___
+| |_| | |_|  _| |_  |_| | |_| | |_|  _| |_  |_| | |_| | |_|  _|
+|_   _|  _  |_   _|  _  |_   _|  _  |_   _|  _  |_   _|  _  |_
+ _| |___| |___| |___| |___| |___| |___| |___| |___| |___| |___|
+\end{BVerbatim}
+
+\end{document}

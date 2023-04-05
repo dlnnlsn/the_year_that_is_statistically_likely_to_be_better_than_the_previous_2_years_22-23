@@ -1,0 +1,91 @@
+\documentclass{article}
+
+\usepackage{mathtools,amsfonts}
+\usepackage{enumitem}
+% \usepackage{fullpage}
+\usepackage{fancyvrb}
+\usepackage{hyperref}
+
+
+\newcommand{\parens}[1]{\left(#1\right)}
+
+\begin{document}
+\thispagestyle{empty}
+
+\begin{center}
+  \textbf{\Large Test 4}
+  \\ \vspace{1em}
+  \textbf{\large April Camp 2023}
+  \\ \vspace{1em}
+  \textbf{\large Time: $4\frac{1}{2}$ hours}
+\end{center}
+
+% \bigskip
+\vfill
+
+\begin{enumerate}[itemsep=\fill]
+
+\item % EMC 2014
+Prove that there are infinitely many positive integers which can't be expressed as $a^{d(a)}+b^{d(b)}$ where $a$ and $b$ are positive integers and $d(n)$ denotes the number of positive divisors of a positive integer $n$.
+
+
+\item % ThMO 2014 Q5
+Determine the largest real number $k$ such that the inequality
+\[ \parens{k+\frac{a}{b}} \parens{k+\frac{b}{c}} \parens{k+\frac{c}{a}} \leq \parens{\frac{a}{b}+\frac{b}{c}+\frac{c}{a}} \parens{\frac{b}{a}+\frac{c}{b}+\frac{a}{c}} \]
+holds for all positive real numbers $a$, $b$, and $c$.
+
+
+\item % IMOSL C3 2022
+In each square of a garden shaped like a $2022 \times 2022$ board, there is initially a tree of height $0$.
+A gardener and a lumberjack take turns playing the following game, with the gardener taking the first turn:
+\begin{itemize}
+  \item The gardener chooses a square in the garden. Each tree on that square and all the surrounding squares (of which there are at most eight) then becomes one unit taller.
+  \item the lumberjack then chooses four different squares on the board. Each tree of positive height on those squares then becomes one unit shorter.
+\end{itemize}
+We call a tree \emph{majestic} if its height is at least $10^6$.
+Determine the largest number $K$ such that the gardener can ensure that there are eventually $K$ majestic trees in the garden, no matter how the lumberjack plays.
+
+
+\item % IMOSL G4 2022
+Let $ABC$ be an acute-angled triangle with $AC > BC$, let $O$ be its circumcentre, and let $D$ be a point on the segment $BC$.
+The line through $D$ perpendicular to $BC$ intersects the lines $AO$, $AC$, and $AB$ at $W$, $X$, and $Y$ respectively.
+The circumcircles of $AXY$ and $ABC$ intersect again at $Z \neq A$.
+Prove that if $OW = OD$, then $DZ$ is tangent to the circle $AXY$.
+
+
+\end{enumerate}
+
+
+\vfill
+% ASCII art
+\centering
+\fontsize{3pt}{2.75pt}
+\begin{BVerbatim}
+                  ____                    
+             ____ \__ \
+             \__ \__/ / __
+             __/ ____ \ \ \    ____
+            / __ \__ \ \/ / __ \__ \
+       ____ \ \ \__/ / __ \/ / __/ / __
+  ____ \__ \ \/ ____ \/ / __/ / __ \ \ \
+  \__ \__/ / __ \__ \__/ / __ \ \ \ \/
+  __/ ____ \ \ \__/ ____ \ \ \ \/ / __
+ / __ \__ \ \/ ____ \__ \ \/ / __ \/ /
+ \ \ \__/ / __ \__ \__/ / __ \ \ \__/
+  \/ ____ \/ / __/ ____ \ \ \ \/ ____
+     \__ \__/ / __ \__ \ \/ / __ \__ \
+     __/ ____ \ \ \__/ / __ \/ / __/ / __
+    / __ \__ \ \/ ____ \/ / __/ / __ \/ /
+    \/ / __/ / __ \__ \__/ / __ \/ / __/
+    __/ / __ \ \ \__/ ____ \ \ \__/ / __
+   / __ \ \ \ \/ ____ \__ \ \/ ____ \/ /
+   \ \ \ \/ / __ \__ \__/ / __ \__ \__/
+    \/ / __ \/ / __/ ____ \ \ \__/
+       \ \ \__/ / __ \__ \ \/
+        \/      \ \ \__/ / __
+                 \/ ____ \/ /
+                    \__ \__/
+                    __/
+\end{BVerbatim}
+
+\end{document}
