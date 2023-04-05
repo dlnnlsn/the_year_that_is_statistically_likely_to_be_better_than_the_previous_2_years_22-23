@@ -1,5 +1,5 @@
 \documentclass{article}
-
+\usepackage[pdftex]{graphicx}
 \usepackage{mathtools,amsfonts}
 \usepackage{enumitem}
 \usepackage{fullpage}
@@ -33,9 +33,15 @@ Next, if any $a_i$ is divisible by 3, then so is the given product. If no $a_i$ 
 
 Finally, since $3$ and $4$ are relatively prime, the given product is divisible by $3\times 4 = 12$. 
 
-\item Suppose this is possible, and let $\ell$ be the line containing the 5 midpoints of the sides, and suppose WLOG that $\ell$ is horizontal. Note that the vertices of a particular edge must be equidistant from $\ell$, since $\ell$ contains its midpoint. This holds for all 5 of the edges, so all 6 vertices of the hexagon are equidistant from $\ell$, lying alternately above and below $\ell$. In particular, this implies that the midpoint of the sixth edge also lies on $\ell$.
+\item 
 
-Now consider the leftmost vertex above $\ell$ and the leftmost vertex below $\ell$. Every edge of the hexagon intersects $\ell$; the vertex above $\ell$ must thus connect to two vertices below $\ell$ and the vertex below $\ell$ must connect to two vertices above $\ell$. This leads to at least three edges, two of which must intersect, as in the diagram. 
+Suppose this is possible, and let $\ell$ be the line containing the 5 midpoints of the sides, and suppose WLOG that $\ell$ is horizontal. Note that the vertices of a particular edge must be equidistant from $\ell$, since $\ell$ contains its midpoint. This holds for all 5 of the edges, so all 6 vertices of the hexagon are equidistant from $\ell$, lying alternately above and below $\ell$. In particular, this implies that the midpoint of the sixth edge also lies on $\ell$.
+
+\centerline{\convertMPtoPDF{talent2010senior3_3.1.sol}{0.8}{0.8}}
+
+Now consider the leftmost vertex above $\ell$ and the leftmost vertex below $\ell$. Every edge of the hexagon intersects $\ell$; the vertex above $\ell$ must thus connect to two vertices below $\ell$ and the vertex below $\ell$ must connect to two vertices above $\ell$. This leads to at least three edges, two of which must intersect, as in the diagram.
+
+\centerline{\convertMPtoPDF{talent2010senior3_3.2.sol}{0.8}{0.8}}
 
 \item Construct a \emph{cycle} of houses as follows: pick any house as the first house and suppose that, inductively, the $n^{\textrm{th}}$ house has been chosen. Let house $n+1$ be the house which is occupied by the dwarf which occupied the $n^{\textrm{th}}$ house last summer. At some point this sequence must start repeating to form a cycle. If not all the houses have been used up, pick a random house, and construct a new cycle using the above process. 
 
@@ -45,7 +51,9 @@ Thus, any dwarf who lived in a green house last summer would be in a red or whit
 
 \item Suppose \wlg\ that the equilateral triangle has side length 1. Note that since the line segments $OA$, $OB$ and $OC$ lie entirely inside the triangle $ABC$, each one of these lengths are less than 1. Also, using the triangle inequality in triangle $AOB$ we get 
 $$AO+BO > AB = 1 > CO$$
-Similarly, $BO + CO > AO$ and $AO+CO > BO$. Hence the segments $AO$, $BO$ and $CO$ satisfy all three triangle inequalities, which implies that they form a triangle. 
+Similarly, $BO + CO > AO$ and $AO+CO > BO$. Hence the segments $AO$, $BO$ and $CO$ satisfy all three triangle inequalities, which implies that they form a triangle.
+
+\centerline{\convertMPtoPDF{talent2010senior3_5.1.sol}{1.2}{1.2}}
 
 \item For the first inequality, note that 
 $$\frac{a}{a+b} + \frac{b}{b+c} + \frac{c}{c+a} > \frac{a}{a+b+c} + \frac{b}{a+b+c}+\frac{c}{a+b+c}=1.$$
