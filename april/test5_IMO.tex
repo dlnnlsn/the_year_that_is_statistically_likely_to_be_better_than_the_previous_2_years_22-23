@@ -1,0 +1,87 @@
+\documentclass{article}
+
+\usepackage{mathtools,amssymb}
+\usepackage{enumitem}
+% \usepackage{fullpage}
+\usepackage{fancyvrb}
+\usepackage{hyperref}
+
+
+\begin{document}
+\thispagestyle{empty}
+
+\begin{center}
+  \textbf{\Large Test 5: IMO}
+  \\ \vspace{1em}
+  \textbf{\large April Camp 2023}
+  \\ \vspace{1em}
+  \textbf{\large Time: $4\frac{1}{2}$ hours}
+\end{center}
+
+\bigskip
+\vfill
+
+\begin{enumerate}[itemsep=\medskipamount]
+
+\item % IMOSL N2 2022
+Find all positive integers $n$ such that
+\[ n! \ \mathrel{\biggl\vert} \prod_{\substack{p < q \leq n \\ p,q\ \text{primes}}} (p+q). \]~
+
+
+\item % IMOSL A4 2022
+Let $n \geq 3$ be an integer, and let $x_1, x_2, \dotsc, x_n$ be real numbers in the interval $[0,1]$.
+Let $s = x_1+x_2+\dotsb+x_n$, and assume that $s \geq 3$.
+Prove that there exist integers $i$ and $j$ with $1 \leq i < j \leq n$ such that
+\[ 2^{j-i} x_i x_j > 2^{s-3}. \]~
+
+
+\item % IMOSL C6 2022
+Let $n$ be a positive integer.
+We start with $n$ piles of pebbles, each initially containing a single pebble.
+One can perform moves of the following form: choose two piles, take and equal number of pebbles from each pile and form a new pile out of these pebbles.
+For each positive integer $n$, find the smallest number of non-empty piles that one can obtain by performing a finite sequence of moves of this form.
+
+
+\end{enumerate}
+
+
+\vfill
+% ASCII art
+\centering
+\fontsize{5pt}{4.5pt}
+\begin{BVerbatim}
+                               db
+                              dbdb
+                             db  db
+                            dbdbdbdb
+                           db      db
+                          dbdb    dbdb
+                         db  db  db  db
+                        dbdbdbdbdbdbdbdb
+                       db              db
+                      dbdb            dbdb
+                     db  db          db  db
+                    dbdbdbdb        dbdbdbdb
+                   db      db      db      db
+                  dbdb    dbdb    dbdb    dbdb
+                 db  db  db  db  db  db  db  db
+                dbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdb
+               db                              db
+              dbdb                            dbdb
+             db  db                          db  db
+            dbdbdbdb                        dbdbdbdb
+           db      db                      db      db
+          dbdb    dbdb                    dbdb    dbdb
+         db  db  db  db                  db  db  db  db
+        dbdbdbdbdbdbdbdb                dbdbdbdbdbdbdbdb
+       db              db              db              db
+      dbdb            dbdb            dbdb            dbdb
+     db  db          db  db          db  db          db  db
+    dbdbdbdb        dbdbdbdb        dbdbdbdb        dbdbdbdb
+   db      db      db      db      db      db      db      db
+  dbdb    dbdb    dbdb    dbdb    dbdb    dbdb    dbdb    dbdb
+ db  db  db  db  db  db  db  db  db  db  db  db  db  db  db  db
+dbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdbdb
+\end{BVerbatim}
+
+\end{document}
