@@ -1,0 +1,65 @@
+\documentclass{article}
+\usepackage[pdftex]{graphicx}
+\usepackage{mathtools,amsfonts}
+\usepackage{enumitem}
+\usepackage{fullpage}
+\usepackage{fancyvrb}
+\usepackage{hyperref}
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\newcommand*{\floor}[1]{\left\lfloor#1\right\rfloor}
+
+
+\begin{document}
+\thispagestyle{empty}
+
+\begin{center}
+  \textbf{\Large January Intermediate Monthly Solutions 2023}
+  \\ \vspace{1em}
+\end{center}
+
+\bigskip
+
+\begin{enumerate}
+
+\item If we are interested in the last two digits of the expansion, we can keep on only considering the last two digits at any stage, since multiplication by any other digits in front of the last two will not change the last two digits in the result. So we have,\\
+\newline
+$6^1=6$\\
+$6^2=36$\\
+$6^3=216$\\
+$6^4=216\times 6 \equiv_{100} 96$ \small where $\equiv_{100} $ means the last two digits is equal to the last two digits of\\ \normalsize
+$6^5\equiv_{100} 96\times 6 = 576\equiv_{100} 76$\\
+$6^6\equiv_{100} 76\times 6 = 456\equiv_{100} 56$\\
+$6^7\equiv_{100} 56\times 6 = 336\equiv_{100} 36$\\
+\newline
+Now we see that 36 has occurred again, but from what we stated previously we can loop back to the top. So we will keep looping through this cycle. We thus see that $6^{2023}\equiv_{100} 6^3$.  Thus the last two digits of $6^{2023}$ is 16.
+
+\item There are at least three different ways of solving this problem. The first way is to draw in a perpendicular from one of the vertices to the opposite side and solving the simultaneous equations that result. The second way is to dissect the triangle into two known Pythagorean triangles. The third way, which we will use, is calculating the area with Heron's formula.\\
+Area $=\sqrt{s(s-a)(s-b)(s-c)}$ where the sides are $a$, $b$, $c$ and $s=\frac{a+b+c}{2}$.\\
+Thus $s=\frac{10+17+21}{2}=24$.\\
+Thus area $=\sqrt{24(14)(7)(3)}=\sqrt{2^4\times 3^2\times 7^2}=2^2\times 3\times 7=84$.
+
+\item $N =(a^{2} + 85)^{2} - (18a+3)^{2} = (a^{2} -18a + 82)(a^{2} + 18a + 88) = ((a-9)^{2} + 1)((a+9)^{2} + 7)$, since $a$ is positive, $a^{2} -18a + 82 < a^{2} + 18a + 88$. Thus, if $N$ is prime, $N = (a+9)^{2} + 7$ and $1 = (a-9)^{2} + 1$. Which yields $a = 9$ $\Rightarrow$ $N = 331$
+
+\item Move 1:
+\begin{itemize}
+    \item Archimedes puts the \{1kg, 2kg, 3kg, 5kg\} pieces in the bag.
+    \item King Hiero knows that for four pieces to be in the bag, they have to be in the \{1kg, 2kg, 3kg, 4kg\} or the \{1kg, 2kg, 3kg, 5kg\} bag. In both cases, the 1kg, 2kg, 3kg pieces are in the bag.
+\end{itemize}
+\newline
+Move 2:
+\begin{itemize}
+    \item Archimedes puts the \{1kg, 4kg, 6kg\} pieces in the bag.
+    \item King Hiero sees that the pieces that are now in the bag, were not present in the first move. He thus knows that at least two pieces in the bag are heavier than 3kg. He also knows that the combined weight of these two pieces is at most 10 since there is another piece in the bag. He also knows that one of the 4kg or 5kg pieces was not in the bag in the previous move and one was present. The only way this is possible is if the two that were not in the bag in the first move were the 4kg and 6kg and the 1kg piece was present. 
+
+    Therefore, he knows where the 1kg is, since it is the only one used in both moves. Since, Archimedes cannot convince King Hiero in one move, two moves is the minimum possible number of moves.
+\end{itemize}
+
+\item Let $M$ be the midpoint of $AB$. From $AK = LB$, we have $KM = ML = \frac{BC}{2}$. From the midpoint theorem, $MO = \frac{BC}{2}$. Thus, $MK = ML = MO$. So $M$ is the center of the circumcircle of $\triangle{KOL}$. Showing that $KL$ is the diameter of this circle. Since a diameter subtends a 90$^{\circ}$ angle at the circumference, $\angle{KOL} = 90$. 
+
+\item Since $A$ is non-empty, there exists a positive integer $a \in A$. If $a = 1$ is the only element in $A$, then $A$ is complete since there are no positive integers $m$, $n$ such that $m + n = 1$. Suppose $a > 1$ is an element in A. Notice that $a = (a-1) + 1$, thus $a-1$ is an element of $A$. Thus, clearly if $A$ is infinite, then $A = \mathbb{N}$. Suppose that $A$ were finite, then $A$ would have a largest element $a_{M}$. Further suppose that $a_{M} \geq 5$. Then since $2 + (a_{M} - 2) = a_{M} \in A$, then $2(a_{M} - 2) \in A$. However, $a_{M} > 4 \Rightarrow  a_{M} + (a_{M}-4) > 4 + (a_{M}-4) = a_{M}$ implying that $2(a_{M} - 4)$ is in $A$ and larger than the largest element in $A$, contradiction. Thus, if $A$ is finite, the largest element in $A$ is at most 4. If $a_{M} = 4$, then $A = {1, 2,3, 4}$, which can easily be shown to be complete. Similarly, $\{1, 2, 3\}$ and $\{1, 2\}$ can also be shown to be complete.
+Therefore, $\{1\}$, $\{1, 2\}$, $\{1, 2, 3\}$, $\{1, 2, 3, 4\}$ and $\mathbb{N}$ are the only complete sets.
+
+\end{enumerate}
+
+\end{document}
